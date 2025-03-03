@@ -1,0 +1,92 @@
+{
+    "azul": {
+        "UnidadManiobra": {
+            "BTQ": 100,
+            "RCB": 80,
+            "BIB": 60,
+            "BIM": 35,
+            "CIA TANQUES T 55": 32,
+            "ECB": 15,
+            "CIA INF BLINDADA": 15,
+            "CIA INFMOTZDA": 10
+        },
+        "ApoyoFuego": {
+            "GAC 122 mm (Cohetes)": 90,
+            "GAC 130 mm": 62,
+            "GAB 155 mm": 60,
+            "GAC 122 mm": 30,
+            "GAC 105 mm": 25,
+            "BAT ART CAMP 122 mm (Cohetes)": 28,
+            "BAT ART CAMP 130 mm": 18,
+            "BAT ART BLIN 155 mm": 16,
+            "BAT ART CAMP 122 mm": 9,
+            "BAT ART CAMP 105 mm": 8,        
+            "BTN AT": 7,
+            "CIA AT": 3,
+            "ESC DE HELOS": 65
+        }
+    },
+    
+    "negro": {
+        "UnidadManiobra": {
+            "BTQ": 240,
+            "CAB": 150,
+            "BTN CAZATANQUES": 120,
+            "BI MECANIZADO": 75,
+            "BIM": 35,
+            "CIA TANQUES": 70,
+            "ECB": 40,
+            "CIA CAZATANQUES": 70,
+            "CIA MECANIZADA": 20,
+            "CIA INF MOTORIZADA": 10,
+            "CIA CMDOS AEROTRANSP": 8
+        },
+        "ApoyoFuego": {
+            "GAC 160 mm (Cohetes)": 125,
+            "GAC 122 mm (Cohetes)": 110,
+            "GAB 155 mm": 60,
+            "GAC 122 mm": 59,
+            "GAC 155 mm": 30,
+            "GAC 105 mm": 25,
+            "BAT ART CAMP 160 mm (Cohetes)": 40,
+            "BATART CAMP 122 Cohetes)": 35,
+            "BAT ART BLIN 155 mm": 16,
+            "BAT ART CAMP 122 mm": 15,
+            "BAT ART CAMP 155 mm": 9,
+            "BAT ART CAMP 105 mm": 8,
+            "CIA MORTERO": 9,
+            "BTN AT": 10,
+            "CIA AT": 3,
+            "ESC DE HELOS": 65
+        }
+    },
+    
+        "rojo": {
+        "UnidadManiobra": {
+            "GPO TANQUES": 90,
+            "GCB": 85,
+            "BIB": 70,
+            "BI FFEE": 35,
+            "BIM": 33,
+            "CIA TANQUES T 55": 30,
+            "CIA INF BLIN": 18,
+            "ECB": 17,
+            "CIA FFEE": 10,
+            "CIA INF MOTZDA": 8
+        },
+        "ApoyoFuego": {
+            "GAC 122 mm (Cohetes)": 110,
+            "GAB 155 mm": 60,
+            "GAC 122 mm": 30,
+            "GAC 105 mm": 25,
+            "BAT ART CAMP 122 (Cohetes)": 40,
+            "BAT ART BLIN 155 mm": 16,
+            "BAT ART CAMP 122 mm": 10,
+            "BAT ART CAMP 105 mm": 8,
+            "CIA MORTEROS":9,
+            "BTN AT": 10,
+            "CIA AT": 3,
+            "ESC DE HELOS": 65
+        }
+    }
+}

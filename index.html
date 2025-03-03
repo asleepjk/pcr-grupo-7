@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de PCR</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			background: white;
+        }
+        /* Estilos mínimos para la demostración */
+        .tabla { display: inline-block; vertical-align: top; margin-right: 10px; margin-top:30px;}
+        .tabla .titulo { background-color: #004085; color: white; text-align: center; }
+        .tabla th, .tabla td { border: 1px solid #dee2e6; padding: 5px; }
+        .tabla th { background-color: #007bff; color: white; }
+        .tabla tfoot { background-color: #ffffe0; }
+        .btn-add { margin-top: 10px; }
+
+        .tabla-negro { display: inline-block; vertical-align: top; margin-right: 10px; margin-top:30px;}
+        .tabla-negro .titulo { background-color: #0a0a0a; color: white; text-align: center; }
+        .tabla-negro th, .tabla-negro td { border: 1px solid #dee2e6; padding: 5px; }
+        .tabla-negro th { background-color: #5b5b5b; color: white; }
+        .tabla-negro tfoot { background-color: #ffffe0; }
+    </style>
+</head>
+<body>
+    <div class="tabla" id="tabla-azul">
+        <div class="titulo">AZUL</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>CANT</th>
+                    <th>CAP OPER</th>
+                    <th>CANT REAL</th>
+                    <th>COEF</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de elementos se llenarán dinámicamente -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">SUB TOTAL ELEMENTOS DE MANIOBRA</td>
+                    <td id="subtotal-azul">0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div id="contenedor-elementos-azul">
+            <!-- Aquí se insertarán dinámicamente los dropdowns para Azul -->
+        </div>
+        <button class="btn-add" onclick="agregarElemento('azul')">Añadir Elemento Azul</button>
+    </div>
+
+    <div class="tabla-negro" id="tabla-negro">
+        <div class="titulo">NEGRO</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>CANT</th>
+                    <th>CAP OPER</th>
+                    <th>CANT REAL</th>
+                    <th>COEF</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de elementos se llenarán dinámicamente -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">SUB TOTAL ELEMENTOS DE MANIOBRA</td>
+                    <td id="subtotal-negro">0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div id="contenedor-elementos-negro">
+            <!-- Aquí se insertarán dinámicamente los dropdowns para Negro -->
+        </div>
+        <button class="btn-add" onclick="agregarElemento('negro')">Añadir Elemento Negro</button>
+    </div>
+
+    <div class="tabla" id="tabla-comparacion">
+        <div class="titulo">COMPARACIÓN</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>POT COMB MANIOBRA (CON REFUERZOS)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="pot-comb-maniobra">0 a 0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--------------------------------------------------------------------------->
+
+    <div class="tabla" id="tabla-fuego-azul">
+        <div class="titulo">AZUL</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>CANT</th>
+                    <th>CAP OPER</th>
+                    <th>CANT REAL</th>
+                    <th>COEF</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de elementos se llenarán dinámicamente -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">SUB TOTAL ELEMENTOS DE APOYO DE FUEGO</td>
+                    <td id="subtotal-fuego-azul">0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div id="contenedor-elementos-fuego-azul">
+            <!-- Aquí se insertarán dinámicamente los dropdowns para Azul -->
+        </div>
+        <button class="btn-add" onclick="agregarElementoFuego('azul')">Añadir Elemento Azul</button>
+    </div>
+
+    <div class="tabla-negro" id="tabla-fuego-negro">
+        <div class="titulo">NEGRO</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>CANT</th>
+                    <th>CAP OPER</th>
+                    <th>CANT REAL</th>
+                    <th>COEF</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de elementos se llenarán dinámicamente -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">SUB TOTAL ELEMENTOS DE APOYO DE FUEGO</td>
+                    <td id="subtotal-fuego-negro">0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div id="contenedor-elementos-fuego-negro">
+            <!-- Aquí se insertarán dinámicamente los dropdowns para Negro -->
+        </div>
+        <button class="btn-add" onclick="agregarElementoFuego('negro')">Añadir Elemento Negro</button>
+    </div>
+
+    <div class="tabla" id="tabla-resumen">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">POTENCIA COMBATIVA DESTRUCTIVA CON REFUERZO (Maniobra + Fuego)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="potencia-combativa-azul">0.00</td>
+                    <td id="potencia-combativa-negro">0.00</td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="proporcion-combativa">0 a 1 a favor de las Fuerzas Amigas</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Tabla de factores -->
+    <div class="tabla">
+        <table id="tabla-factores">
+            <thead>
+                <tr>
+                    <th>FACTORES</th>
+                    <th>FZA AMIGA</th>
+                    <th>ENO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas para cada factor con inputs para los valores -->
+                <tr><td>INTELIGENCIA</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
+                <tr><td>SOSTENIMIENTO</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
+                <tr><td>PROTECCION (AAAe)</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
+                <tr><td>C4I</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
+                <tr><td>INFORMACION (GE)</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
+                <tr><td>LIDERAZGO</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
+                <tr><td>ING COMBATE</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
+                <tr><td>FFEE</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
+                <tr><td>GUERRA NBQ</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
+                <!-- ... Repetir para los otros 7 factores ... -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>TOTAL</td>
+                    <td id="total-fza-amiga">0.00</td>
+                    <td id="total-eno">0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+
+    <!-- Cuadro resumen de potencia combativa cuantitativa del refuerzo -->
+<div class="tabla">
+    <table id="tabla-potencia-combativa">
+        <thead>
+            <tr>
+                <th colspan="3">POTENCIA COMBATIVA CUANTITATIVA DEL REFUERZO CONSIDERANDO FACTOR MULTIPLICADOR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="pcc-refuerzo-azul">0.0</td> <!-- Valor PCD Refuerzo para Azul -->
+                <td id="multiplicador-azul">0.0</td> <!-- Multiplicador para Azul -->
+                <td id="pcc-azul">0.0</td> <!-- PCC para Azul, calculado -->
+            </tr>
+            <tr>
+                <td id="pcc-refuerzo-negro">0.0</td> <!-- Valor PCD Refuerzo para Negro -->
+                <td id="multiplicador-negro">0.0</td> <!-- Multiplicador para Negro -->
+                <td id="pcc-negro">0.0</td> <!-- PCC para Negro, calculado -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" id="resumen-pcc">0 a 1 a favor de las Fuerzas Enemigas</td> <!-- Resumen final, calculado -->
+            </tr>
+        </tfoot>
+    </table>
+</div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
