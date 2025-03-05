@@ -1,17 +1,17 @@
-function addTableListeners() {
+function addTableListenersEconomia() {
     const tablasSecundarias = document.querySelectorAll(".tabla-secundaria"); 
 
     tablasSecundarias.forEach(tabla => {
         tabla.addEventListener("input", function (event) {
             if (event.target.tagName === "INPUT") {
-                calcularTablaSecundaria(tabla.id);
+                calcularTablaSecundariaEconomia(tabla.id);
             }
         });
     });
 }
 
 // Función para calcular cualquier tabla secundaria
-function calcularTablaSecundaria(tablaID) {
+function calcularTablaSecundariaEconomia(tablaID) {
     let filas = document.querySelectorAll(`#${tablaID} tbody tr`);
 
     let subtotalNuestras = 0;
@@ -59,17 +59,19 @@ function calcularTablaSecundaria(tablaID) {
     }
 
     // Actualizar la tabla principal después de recalcular la tabla secundaria
-    actualizarTablaPrincipal();
+    actualizarTablaPrincipalEconomia();
 }
 
 // Función para actualizar la tabla principal con los valores de las secundarias
-function actualizarTablaPrincipal() {
+function actualizarTablaPrincipalEconomia() {
     const factores = {
-        "gobierno-central_politica": "gobierno-central",
-        "partidos-politicos_politica": "partidos-politicos",
-        "gobiernos-locales_politica": "gobiernos-locales",
-        "relaciones-internacionales_politica": "relaciones-internacionales"
-    };
+        "produccion-economia": "produccion-economia",
+        "distribucion-economia": "distribucion-economia",
+        "consumo-economia": "consumo-economia",
+        "defensa-economia": "defensa-economia",
+        "reserva-economia": "reserva-economia",
+        "informal-economia": "informal-economia"
+    }
 
     let totalNuestras = 0;
     let totalEnemigo = 0;
@@ -94,8 +96,7 @@ function actualizarTablaPrincipal() {
         document.getElementById(`cant-${idBase}-enemigo`).value = subtotalEnemigo.toFixed(2);
         document.getElementById(`total-${idBase}-enemigo`).value = totalEnemigoFactor.toFixed(2);
 
-        //Agregar a la tabla maestra
-
+        // Agregar tabla maestra
         document.getElementById(`cant-${idBase}_master`).value = subtotalNuestras.toFixed(2);
         document.getElementById(`total-${idBase}_master`).value = totalNuestrasFactor.toFixed(2);
 
@@ -108,58 +109,102 @@ function actualizarTablaPrincipal() {
     });
 
     // Insertamos los subtotales en la tabla principal
-    document.getElementById("subtotal-nuestras").value = totalNuestras.toFixed(2);
-    document.getElementById("subtotal-enemigo").value = totalEnemigo.toFixed(2);
+    document.getElementById("subtotal-nuestras-economia").value = totalNuestras.toFixed(2);
+    document.getElementById("subtotal-enemigo-economia").value = totalEnemigo.toFixed(2);
 
-    //Agregar a la tabla maestra
-
-    document.getElementById("subtotal-nuestras_master").value = totalNuestras.toFixed(2);
-    document.getElementById("subtotal-enemigo_master").value = totalEnemigo.toFixed(2);
+    // Agregar tabla maestra
+    document.getElementById("subtotal-nuestras-economia_master").value = totalNuestras.toFixed(2);
+    document.getElementById("subtotal-enemigo-economia_master").value = totalEnemigo.toFixed(2);
 
     // Calcular POT COMB
     let potComb = totalNuestras !== 0 ? totalEnemigo / totalNuestras : 0;
-    document.getElementById("potcomb-politica").value = potComb.toFixed(2);
-    // Agregar a la tabla maestra
-    document.getElementById("potcomb-politica_master").value = potComb.toFixed(2);
+    document.getElementById("potcomb-politica-economia").value = potComb.toFixed(2);
+    // Agregar tabla maestra
+    document.getElementById("potcomb-politica-economia_master").value = potComb.toFixed(2);
 }
 
 // GUARDAR DATOS
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
         console.log("🔹 Restaurando valores en política...");
-        loadAllTableDataPolitica(); // 🔥 Restaurar valores SOLO de Política
-    }, 100);
+        loadTabTableDataEconomia(); // 🔥 Restaurar valores en todas las tablas (principal y secundarias)
+    }, 0);
 
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        input.dataset.index = `politica_${index}`;
+    document.querySelectorAll("input[type='number']").forEach((input, index) => {
+        input.dataset.index = index; // 🔥 Guardar la posición del input como identificador único
         input.addEventListener("input", function () {
-            console.log(`📝 Guardando en Política: Index ${index} = ${input.value}`);
+            console.log(`📝 Guardando en tabla secundaria: Index ${index} = ${input.value}`);
+            saveAllTableDataEconomia();
         });
     });
 });
 
-// 🔹 Guardar SOLO los valores de Política en `localStorage`
-function saveAllTableDataPolitica() {
+// 🔹 Guardar TODOS los valores en `localStorage`
+function saveAllTableDataEconomia() {
     let tableData = [];
-
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        tableData[index] = input.value;
-        console.log(`✅ Guardado en Política: Index ${index} = ${input.value}`);
+    
+    document.querySelectorAll("input[type='number']").forEach((input, index) => {
+        tableData[index] = input.value; // 🔥 Guardar cada valor por su posición en la tabla
+        console.log(`✅ Guardado: Index ${index} = ${input.value}`);
     });
 
-    localStorage.setItem("allTableDataPolitica", JSON.stringify(tableData));
-    console.log("📦 Datos guardados en localStorage para Política:", tableData);
+    localStorage.setItem("allTableData", JSON.stringify(tableData));
+    console.log("📦 Datos guardados en localStorage:", tableData);
 }
 
-// 🔹 Cargar SOLO los valores de Política desde `localStorage`
-function loadAllTableDataPolitica() {
-    let storedData = JSON.parse(localStorage.getItem("allTableDataPolitica")) || [];
-    console.log("📥 Cargando datos de Política desde localStorage:", storedData);
+// 🔹 Restaurar valores de TODAS las tablas de `politica.html`
+function loadTabTableDataEconomia() {
+    let storedData = JSON.parse(localStorage.getItem("allTableData")) || [];
+    console.log("📥 Cargando datos desde localStorage:", storedData);
 
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        if (storedData[index] !== undefined) {
-            input.value = storedData[index];
-            console.log(`🔄 Restaurado en Política: Index ${index} = ${input.value}`);
+    setTimeout(() => {
+        document.querySelectorAll("input[type='number']").forEach((input, index) => {
+            if (storedData[index] !== undefined) {
+                input.value = storedData[index]; // 🔥 Restaurar el valor basado en su posición
+                console.log(`🔄 Restaurado: Index ${index} = ${input.value}`);
+            }
+        });
+    }, 0);
+}
+
+
+// GUARDAR DATOS
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        console.log("🔹 Restaurando valores en economia...");
+        loadAllTableDataEconomia(); // 🔥 Restaurar valores SOLO de economia
+    }, 100);
+
+    document.querySelectorAll("#economia input[type='number']").forEach((input, index) => {
+        input.dataset.index = `economia_${index}`;
+        input.addEventListener("input", function () {
+            console.log(`📝 Guardando en economia: Index ${index} = ${input.value}`);
+        });
+    });
+});
+
+// 🔹 Guardar SOLO los valores de economia en `localStorage`
+function saveAllTableDataEconomia() {
+    let tableData_eco = [];
+
+    document.querySelectorAll("#economia input[type='number']").forEach((input, index) => {
+        tableData_eco[index] = input.value;
+        console.log(`✅ Guardado en economia: Index ${index} = ${input.value}`);
+    });
+
+    localStorage.setItem("allTableDataeconomia", JSON.stringify(tableData_eco));
+    console.log("📦 Datos guardados en localStorage para economia:", tableData_eco);
+}
+
+// 🔹 Cargar SOLO los valores de economia desde `localStorage`
+function loadAllTableDataEconomia() {
+    let storedData_eco = JSON.parse(localStorage.getItem("allTableDataeconomia")) || [];
+    console.log("📥 Cargando datos de economia desde localStorage:", storedData_eco);
+
+    document.querySelectorAll("#economia input[type='number']").forEach((input, index) => {
+        if (storedData_eco[index] !== undefined) {
+            input.value = storedData_eco[index];
+            console.log(`🔄 Restaurado en economia: Index ${index} = ${input.value}`);
         }
     });
 }

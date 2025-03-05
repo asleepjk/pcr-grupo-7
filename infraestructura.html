@@ -1,0 +1,492 @@
+<h2>Variables de Infraestructura</h2>
+<table id="infraestructura_table">
+    <tr>
+        <th rowspan="2">VARIABLE OPERACIONAL</th>
+        <th rowspan="2">FACTORES</th>
+        <th colspan="3" class="nuestras">NUESTRAS</th>
+        <th colspan="3" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td rowspan="7">INFRAESTRUCTURA</td>
+        <td>CENTRAL HIDROELÉCTRICA</td>
+        <td><input type="number" id="cant-hidroelectrica" readonly></td>
+        <td><input type="number" id="coef-hidroelectrica" value="1" readonly></td>
+        <td><input type="number" id="total-hidroelectrica" readonly></td>
+        <td><input type="number" id="cant-hidroelectrica-enemigo" readonly></td>
+        <td><input type="number" id="coef-hidroelectrica-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-hidroelectrica-enemigo" readonly></td>
+        <td rowspan="7" style="vertical-align: bottom;"><input type="number" id="potcomb-politica-infraestructura" readonly></td>
+    </tr>
+    <tr>
+        <td>REPRESAS</td>
+        <td><input type="number" id="cant-represas" readonly></td>
+        <td><input type="number" id="coef-represas" value="1" readonly></td>
+        <td><input type="number" id="total-represas" readonly></td>
+        <td><input type="number" id="cant-represas-enemigo" readonly></td>
+        <td><input type="number" id="coef-represas-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-represas-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>REFINERÍA</td>
+        <td><input type="number" id="cant-refineria" readonly></td>
+        <td><input type="number" id="coef-refineria" value="1" readonly></td>
+        <td><input type="number" id="total-refineria" readonly></td>
+        <td><input type="number" id="cant-refineria-enemigo" readonly></td>
+        <td><input type="number" id="coef-refineria-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-refineria-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>PUERTOS</td>
+        <td><input type="number" id="cant-puertos" readonly></td>
+        <td><input type="number" id="coef-puertos" value="2" readonly></td>
+        <td><input type="number" id="total-puertos" readonly></td>
+        <td><input type="number" id="cant-puertos-enemigo" readonly></td>
+        <td><input type="number" id="coef-puertos-enemigo" value="2" readonly></td>
+        <td><input type="number" id="total-puertos-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>AEROPUERTOS</td>
+        <td><input type="number" id="cant-aeropuertos" readonly></td>
+        <td><input type="number" id="coef-aeropuertos" value="2" readonly></td>
+        <td><input type="number" id="total-aeropuertos" readonly></td>
+        <td><input type="number" id="cant-aeropuertos-enemigo" readonly></td>
+        <td><input type="number" id="coef-aeropuertos-enemigo" value="2" readonly></td>
+        <td><input type="number" id="total-aeropuertos-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>RED VIAL</td>
+        <td><input type="number" id="cant-vial" readonly></td>
+        <td><input type="number" id="coef-vial" value="1" readonly></td>
+        <td><input type="number" id="total-vial" readonly></td>
+        <td><input type="number" id="cant-vial-enemigo" readonly></td>
+        <td><input type="number" id="coef-vial-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-vial-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras-infraestructura" readonly></td>
+        <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo-infraestructura" readonly></td>
+    </tr>
+</table>
+
+
+</br>
+<!-- HIDROELECTRICA -->
+<table id="hidroelectrica" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">CENTRAL HIDROELÉCTRICA</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CENTRAL HIDROLÉTRICA DE 500 A 800 MW</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="8" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="8" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>CENTRAL HIDROLÉTRICA DE 200 A 500 MW</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="5" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="5" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>CENTRAL HIDROLÉTRICA DE 20 A 200 MW</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- REPRESAS -->
+
+<table id="represas" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">REPRESAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>PRESAS CON CAPACIDAD ENTRE 300 A 400 MILLONES DE M3</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="8" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="8" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>PRESAS CON CAPACIDAD ENTRE 200 A 300 MILLONES DE M3</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="5" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="5" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>PRESAS CON CAPACIDAD ENTRE 100 A 200 MILLONES DE M3</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!--REFINERIA-->
+<table id="refineria" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">REFINERÍA</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>REFINERIA DE PRODUCCION MAYOR A 100,000 BPD</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>REFINERIA DE PRODUCCION MAYOR A 20,000 BPD MENOR A 100,000 BPD</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>REFINERIA DE PRODUCCION MAYOR A 1,000 BPD MENOR A 20,000 BPD</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="0.1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="0.1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- PUERTOS -->
+<table id="puertos" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">PUERTOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>PUERTOS MAYORES (MAYOR A 700,000TEUS)</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>PUERTOS MENORES (MENOR A 700,000TEUS)</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>CALETAS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- AEROPUERTOS -->
+
+<table id="aeropuertos" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">AEROPUERTOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>AEROPUERTO NACIONAL E INTERNACIONAL </td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>AEROPUERTO NACIONAL  </td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>AEROPUERTO SIN SERVICIO PROGRAMADO</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>AEROPUERTO MILITAR</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- VIAL -->
+
+<table id="vial" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">RED VIAL</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CARRETERA PRINCIPAL</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>CARRETERA SECUNDARIA</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>

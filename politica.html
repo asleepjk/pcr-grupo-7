@@ -1,0 +1,358 @@
+<h2>Variables Políticas</h2>
+<table id="politica_table">
+    <tr>
+        <th rowspan="2">VARIABLE OPERACIONAL</th>
+        <th rowspan="2">FACTORES</th>
+        <th colspan="3" class="nuestras">NUESTRAS</th>
+        <th colspan="3" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td rowspan="5">POLÍTICA</td>
+        <td>GOBIERNO CENTRAL</td>
+        <td><input type="number" id="cant-gobierno-central"></td>
+        <td><input type="number" id="coef-gobierno-central" value="2" readonly></td>
+        <td><input type="number" id="total-gobierno-central" readonly></td>
+        <td><input type="number" id="cant-gobierno-central-enemigo"></td>
+        <td><input type="number" id="coef-gobierno-central-enemigo" value="2" readonly></td>
+        <td><input type="number" id="total-gobierno-central-enemigo" readonly></td>
+        <td rowspan="5" style="vertical-align: bottom;"><input type="number" id="potcomb-politica" readonly></td>
+    </tr>
+    <tr>
+        <td>RELACION CON PARTIDOS POLITICOS Y GRUPOS DE INTERES</td>
+        <td><input type="number" id="cant-partidos-politicos"></td>
+        <td><input type="number" id="coef-partidos-politicos" value="1" readonly></td>
+        <td><input type="number" id="total-partidos-politicos" readonly></td>
+        <td><input type="number" id="cant-partidos-politicos-enemigo"></td>
+        <td><input type="number" id="coef-partidos-politicos-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-partidos-politicos-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>RELACION CON GOBIERNOS LOCALES</td>
+        <td><input type="number" id="cant-gobiernos-locales"></td>
+        <td><input type="number" id="coef-gobiernos-locales" value="1" readonly></td>
+        <td><input type="number" id="total-gobiernos-locales" readonly></td>
+        <td><input type="number" id="cant-gobiernos-locales-enemigo"></td>
+        <td><input type="number" id="coef-gobiernos-locales-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-gobiernos-locales-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>RELACIONES INTERNACIONALES</td>
+        <td><input type="number" id="cant-relaciones-internacionales"></td>
+        <td><input type="number" id="coef-relaciones-internacionales" value="1" readonly></td>
+        <td><input type="number" id="total-relaciones-internacionales" readonly></td>
+        <td><input type="number" id="cant-relaciones-internacionales-enemigo"></td>
+        <td><input type="number" id="coef-relaciones-internacionales-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-relaciones-internacionales-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras" readonly></td>
+        <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo" readonly></td>
+    </tr>
+</table>
+
+
+</br>
+<!--GOBIERNO CENTRAL -->
+<table id="gobierno-central_politica" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">GOBIERNO CENTRAL</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>APROBACIÓN</br>APRECIÓN %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>APROBACIÓN</br>APRECIÓN %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>LIDERAZGO DEL JEFE DE ESTADO</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2.5" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2.5" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" id="pot-comb_gobierno-central" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>DESEMPEÑO DEL PODER LEGISLATIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>DESEMPEÑO DEL PODER JUDICIAL</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>EFICIENCIA DEL CONSEJO DE MINISTROS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>EQUILIBRIO DE PODERES</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5" id="st-gobierno-central" style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5" id="st-gobiero-central-ene" style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!--GOBIERNO CENTRAL -->
+<table id="partidos-politicos_politica" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">RELACIÓN CON PARTIDOS</br>POLÍTICOS Y</br>GRUPOS DE INTERÉS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>APROBACIÓN</br>APRECIÓN %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>APROBACIÓN</br>APRECIÓN %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>RELACION CON PARTIDOS POLITICOS DEL CONGRESO</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>RELACION CON GRUPO ETNICOS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.5" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.5" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>RELACION CON GRUPOS RELIGIOSOS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>RELACION CON ONG</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5" style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5" style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- GOBIERNOS LOCALES -->
+<table id="gobiernos-locales_politica" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">RELACIÓN CON</br>GOBIERNOS</br>LOCALES</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>APROBACIÓN</br>APRECIÓN %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>APROBACIÓN</br>APRECIÓN %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>REGIONAL</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>PROVINCIAL</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>DISTRITAL</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>    
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5" style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5" style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!--GOBIERNO CENTRAL -->
+<table id="relaciones-internacionales_politica" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">RELACIONES</br>INTERNACIONALES</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>ENCUESTA %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>ENCUESTA %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>PAÍSES DE LA REGIÓN</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>RELACIÓN CON POTENCIAS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5" style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5" style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>

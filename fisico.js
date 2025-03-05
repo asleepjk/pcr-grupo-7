@@ -1,17 +1,17 @@
-function addTableListeners() {
+function addTableListenersFisico() {
     const tablasSecundarias = document.querySelectorAll(".tabla-secundaria"); 
 
     tablasSecundarias.forEach(tabla => {
         tabla.addEventListener("input", function (event) {
             if (event.target.tagName === "INPUT") {
-                calcularTablaSecundaria(tabla.id);
+                calcularTablaSecundariaFisico(tabla.id);
             }
         });
     });
 }
 
 // Función para calcular cualquier tabla secundaria
-function calcularTablaSecundaria(tablaID) {
+function calcularTablaSecundariaFisico(tablaID) {
     let filas = document.querySelectorAll(`#${tablaID} tbody tr`);
 
     let subtotalNuestras = 0;
@@ -20,27 +20,27 @@ function calcularTablaSecundaria(tablaID) {
     filas.forEach((fila) => {
         let inputs = fila.getElementsByTagName("input");
 
-        if (inputs.length >= 10) { // Asegurar que la fila tiene los campos necesarios
+        if (inputs.length >= 6) { // Cambiar la cantidad de columnas
             let cant = parseFloat(inputs[0].value) || 0;
-            let aprobacion = parseFloat(inputs[1].value) || 0;
-            let coef = parseFloat(inputs[3].value) || 1;
+            //let aprobacion = parseFloat(inputs[1].value) || 0;
+            let coef = parseFloat(inputs[1].value) || 1;
 
-            let cantEne = parseFloat(inputs[5].value) || 0;
-            let aprobacionEne = parseFloat(inputs[6].value) || 0;
-            let coefEne = parseFloat(inputs[8].value) || 1;
+            let cantEne = parseFloat(inputs[3].value) || 0;
+            //let aprobacionEne = parseFloat(inputs[6].value) || 0;
+            let coefEne = parseFloat(inputs[4].value) || 1;
 
-            let cantReal = cant * aprobacion;
-            inputs[2].value = cantReal.toFixed(2); // CANT REAL
+            //let cantReal = cant * aprobacion;
+            //inputs[2].value = cantReal.toFixed(2); // CANT REAL
 
-            let cantRealEne = cantEne * aprobacionEne;
-            inputs[7].value = cantRealEne.toFixed(2); // CANT REAL ENEMIGO
+            //let cantRealEne = cantEne * aprobacionEne;
+            //inputs[7].value = cantRealEne.toFixed(2); // CANT REAL ENEMIGO
 
-            let total = cantReal * coef;
-            inputs[4].value = total.toFixed(2); // TOTAL NUESTRAS
+            let total = cant * coef;
+            inputs[2].value = total.toFixed(2); // TOTAL NUESTRAS
             subtotalNuestras += total;
 
-            let totalEne = cantRealEne * coefEne;
-            inputs[9].value = totalEne.toFixed(2); // TOTAL ENEMIGO
+            let totalEne = cantEne * coefEne;
+            inputs[5].value = totalEne.toFixed(2); // TOTAL ENEMIGO
             subtotalEnemigo += totalEne;
         }
     });
@@ -59,17 +59,19 @@ function calcularTablaSecundaria(tablaID) {
     }
 
     // Actualizar la tabla principal después de recalcular la tabla secundaria
-    actualizarTablaPrincipal();
+    actualizarTablaPrincipalFisico();
 }
 
 // Función para actualizar la tabla principal con los valores de las secundarias
-function actualizarTablaPrincipal() {
+function actualizarTablaPrincipalFisico() {
     const factores = {
-        "gobierno-central_politica": "gobierno-central",
-        "partidos-politicos_politica": "partidos-politicos",
-        "gobiernos-locales_politica": "gobiernos-locales",
-        "relaciones-internacionales_politica": "relaciones-internacionales"
-    };
+        "relieve": "relieve",
+        "vegetacion": "vegetacion",
+        "hidrografia": "hidrografia",
+        "arte": "arte",
+        "localidades": "localidades",
+        "naturaleza": "naturaleza"
+    }
 
     let totalNuestras = 0;
     let totalEnemigo = 0;
@@ -95,12 +97,12 @@ function actualizarTablaPrincipal() {
         document.getElementById(`total-${idBase}-enemigo`).value = totalEnemigoFactor.toFixed(2);
 
         //Agregar a la tabla maestra
-
         document.getElementById(`cant-${idBase}_master`).value = subtotalNuestras.toFixed(2);
         document.getElementById(`total-${idBase}_master`).value = totalNuestrasFactor.toFixed(2);
 
         document.getElementById(`cant-${idBase}-enemigo_master`).value = subtotalEnemigo.toFixed(2);
         document.getElementById(`total-${idBase}-enemigo_master`).value = totalEnemigoFactor.toFixed(2);
+
 
         // Acumulamos los totales generales
         totalNuestras += totalNuestrasFactor;
@@ -108,58 +110,58 @@ function actualizarTablaPrincipal() {
     });
 
     // Insertamos los subtotales en la tabla principal
-    document.getElementById("subtotal-nuestras").value = totalNuestras.toFixed(2);
-    document.getElementById("subtotal-enemigo").value = totalEnemigo.toFixed(2);
-
-    //Agregar a la tabla maestra
-
-    document.getElementById("subtotal-nuestras_master").value = totalNuestras.toFixed(2);
+    document.getElementById("subtotal-nuestras-fisico").value = totalNuestras.toFixed(2);
+    document.getElementById("subtotal-enemigo-fisico").value = totalEnemigo.toFixed(2);
+    // Agregar a la tabla maestra
+    document.getElementById("subtotal-nuestras-fisico_master").value = totalNuestras.toFixed(2);
     document.getElementById("subtotal-enemigo_master").value = totalEnemigo.toFixed(2);
+
 
     // Calcular POT COMB
     let potComb = totalNuestras !== 0 ? totalEnemigo / totalNuestras : 0;
-    document.getElementById("potcomb-politica").value = potComb.toFixed(2);
+    document.getElementById("potcomb-politica-fisico").value = potComb.toFixed(2);
     // Agregar a la tabla maestra
-    document.getElementById("potcomb-politica_master").value = potComb.toFixed(2);
+    document.getElementById("potcomb-politica-fisico_master").value = potComb.toFixed(2);
 }
 
 // GUARDAR DATOS
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
-        console.log("🔹 Restaurando valores en política...");
-        loadAllTableDataPolitica(); // 🔥 Restaurar valores SOLO de Política
+        console.log("🔹 Restaurando valores en fisico...");
+        loadAllTableDataFisico(); // 🔥 Restaurar valores SOLO de fisico
     }, 100);
 
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        input.dataset.index = `politica_${index}`;
+    document.querySelectorAll("#fisico input[type='number']").forEach((input, index) => {
+        input.dataset.index = `fisico_${index}`;
         input.addEventListener("input", function () {
-            console.log(`📝 Guardando en Política: Index ${index} = ${input.value}`);
+            console.log(`📝 Guardando en fisico: Index ${index} = ${input.value}`);
         });
     });
 });
 
-// 🔹 Guardar SOLO los valores de Política en `localStorage`
-function saveAllTableDataPolitica() {
-    let tableData = [];
+// 🔹 Guardar SOLO los valores de fisico en `localStorage`
+function saveAllTableDataFisico() {
+    let tableData_fisico = [];
 
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        tableData[index] = input.value;
-        console.log(`✅ Guardado en Política: Index ${index} = ${input.value}`);
+    document.querySelectorAll("#fisico input[type='number']").forEach((input, index) => {
+        tableData_fisico[index] = input.value;
+        console.log(`✅ Guardado en fisico: Index ${index} = ${input.value}`);
     });
 
-    localStorage.setItem("allTableDataPolitica", JSON.stringify(tableData));
-    console.log("📦 Datos guardados en localStorage para Política:", tableData);
+    localStorage.setItem("allTableDatafisico", JSON.stringify(tableData_fisico));
+    console.log("📦 Datos guardados en localStorage para fisico:", tableData_fisico);
 }
 
-// 🔹 Cargar SOLO los valores de Política desde `localStorage`
-function loadAllTableDataPolitica() {
-    let storedData = JSON.parse(localStorage.getItem("allTableDataPolitica")) || [];
-    console.log("📥 Cargando datos de Política desde localStorage:", storedData);
+// 🔹 Cargar SOLO los valores de fisico desde `localStorage`
+function loadAllTableDataFisico() {
+    let storedData_fisico = JSON.parse(localStorage.getItem("allTableDatafisico")) || [];
+    console.log("📥 Cargando datos de fisico desde localStorage:", storedData_fisico);
 
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        if (storedData[index] !== undefined) {
-            input.value = storedData[index];
-            console.log(`🔄 Restaurado en Política: Index ${index} = ${input.value}`);
+    document.querySelectorAll("#fisico input[type='number']").forEach((input, index) => {
+        if (storedData_fisico[index] !== undefined) {
+            input.value = storedData_fisico[index];
+            console.log(`🔄 Restaurado en fisico: Index ${index} = ${input.value}`);
         }
     });
 }
+

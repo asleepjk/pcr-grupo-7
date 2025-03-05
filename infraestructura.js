@@ -1,17 +1,17 @@
-function addTableListeners() {
+function addTableListenersInfraestructura() {
     const tablasSecundarias = document.querySelectorAll(".tabla-secundaria"); 
 
     tablasSecundarias.forEach(tabla => {
         tabla.addEventListener("input", function (event) {
             if (event.target.tagName === "INPUT") {
-                calcularTablaSecundaria(tabla.id);
+                calcularTablaSecundariaInfraestructura(tabla.id);
             }
         });
     });
 }
 
 // Función para calcular cualquier tabla secundaria
-function calcularTablaSecundaria(tablaID) {
+function calcularTablaSecundariaInfraestructura(tablaID) {
     let filas = document.querySelectorAll(`#${tablaID} tbody tr`);
 
     let subtotalNuestras = 0;
@@ -59,17 +59,19 @@ function calcularTablaSecundaria(tablaID) {
     }
 
     // Actualizar la tabla principal después de recalcular la tabla secundaria
-    actualizarTablaPrincipal();
+    actualizarTablaPrincipalInfraestructura();
 }
 
 // Función para actualizar la tabla principal con los valores de las secundarias
-function actualizarTablaPrincipal() {
+function actualizarTablaPrincipalInfraestructura() {
     const factores = {
-        "gobierno-central_politica": "gobierno-central",
-        "partidos-politicos_politica": "partidos-politicos",
-        "gobiernos-locales_politica": "gobiernos-locales",
-        "relaciones-internacionales_politica": "relaciones-internacionales"
-    };
+        "hidroelectrica": "hidroelectrica",
+        "represas": "represas",
+        "refineria": "refineria",
+        "puertos": "puertos",
+        "aeropuertos": "aeropuertos",
+        "vial": "vial"
+    }
 
     let totalNuestras = 0;
     let totalEnemigo = 0;
@@ -95,7 +97,6 @@ function actualizarTablaPrincipal() {
         document.getElementById(`total-${idBase}-enemigo`).value = totalEnemigoFactor.toFixed(2);
 
         //Agregar a la tabla maestra
-
         document.getElementById(`cant-${idBase}_master`).value = subtotalNuestras.toFixed(2);
         document.getElementById(`total-${idBase}_master`).value = totalNuestrasFactor.toFixed(2);
 
@@ -108,58 +109,60 @@ function actualizarTablaPrincipal() {
     });
 
     // Insertamos los subtotales en la tabla principal
-    document.getElementById("subtotal-nuestras").value = totalNuestras.toFixed(2);
-    document.getElementById("subtotal-enemigo").value = totalEnemigo.toFixed(2);
-
+    document.getElementById("subtotal-nuestras-infraestructura").value = totalNuestras.toFixed(2);
+    document.getElementById("subtotal-enemigo-infraestructura").value = totalEnemigo.toFixed(2);
     //Agregar a la tabla maestra
+    document.getElementById("subtotal-nuestras-infraestructura_master").value = totalNuestras.toFixed(2);
+    document.getElementById("subtotal-enemigo-infraestructura_master").value = totalEnemigo.toFixed(2);
 
-    document.getElementById("subtotal-nuestras_master").value = totalNuestras.toFixed(2);
-    document.getElementById("subtotal-enemigo_master").value = totalEnemigo.toFixed(2);
 
     // Calcular POT COMB
     let potComb = totalNuestras !== 0 ? totalEnemigo / totalNuestras : 0;
-    document.getElementById("potcomb-politica").value = potComb.toFixed(2);
-    // Agregar a la tabla maestra
-    document.getElementById("potcomb-politica_master").value = potComb.toFixed(2);
+    document.getElementById("potcomb-politica-infraestructura").value = potComb.toFixed(2);
+    //Agregar a la tabla maestra
+    document.getElementById("potcomb-politica-infraestructura_master").value = potComb.toFixed(2);
 }
+
 
 // GUARDAR DATOS
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
-        console.log("🔹 Restaurando valores en política...");
-        loadAllTableDataPolitica(); // 🔥 Restaurar valores SOLO de Política
+        console.log("🔹 Restaurando valores en infraestructura...");
+        loadAllTableDataInfraestructura(); // 🔥 Restaurar valores SOLO de infraestructura
     }, 100);
 
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        input.dataset.index = `politica_${index}`;
+    document.querySelectorAll("#infraestructura input[type='number']").forEach((input, index) => {
+        input.dataset.index = `infraestructura_${index}`;
         input.addEventListener("input", function () {
-            console.log(`📝 Guardando en Política: Index ${index} = ${input.value}`);
+            console.log(`📝 Guardando en infraestructura: Index ${index} = ${input.value}`);
         });
     });
 });
 
-// 🔹 Guardar SOLO los valores de Política en `localStorage`
-function saveAllTableDataPolitica() {
-    let tableData = [];
+// 🔹 Guardar SOLO los valores de infraestructura en `localStorage`
+function saveAllTableDataInfraestructura() {
+    let tableData_infraestructura = [];
 
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        tableData[index] = input.value;
-        console.log(`✅ Guardado en Política: Index ${index} = ${input.value}`);
+    document.querySelectorAll("#infraestructura input[type='number']").forEach((input, index) => {
+        tableData_infraestructura[index] = input.value;
+        console.log(`✅ Guardado en infraestructura: Index ${index} = ${input.value}`);
     });
 
-    localStorage.setItem("allTableDataPolitica", JSON.stringify(tableData));
-    console.log("📦 Datos guardados en localStorage para Política:", tableData);
+    localStorage.setItem("allTableDatainfraestructura", JSON.stringify(tableData_infraestructura));
+    console.log("📦 Datos guardados en localStorage para infraestructura:", tableData_infraestructura);
 }
 
-// 🔹 Cargar SOLO los valores de Política desde `localStorage`
-function loadAllTableDataPolitica() {
-    let storedData = JSON.parse(localStorage.getItem("allTableDataPolitica")) || [];
-    console.log("📥 Cargando datos de Política desde localStorage:", storedData);
+// 🔹 Cargar SOLO los valores de infraestructura desde `localStorage`
+function loadAllTableDataInfraestructura() {
+    let storedData_infraestructura = JSON.parse(localStorage.getItem("allTableDatainfraestructura")) || [];
+    console.log("📥 Cargando datos de infraestructura desde localStorage:", storedData_infraestructura);
 
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        if (storedData[index] !== undefined) {
-            input.value = storedData[index];
-            console.log(`🔄 Restaurado en Política: Index ${index} = ${input.value}`);
+    document.querySelectorAll("#infraestructura input[type='number']").forEach((input, index) => {
+        if (storedData_infraestructura[index] !== undefined) {
+            input.value = storedData_infraestructura[index];
+            console.log(`🔄 Restaurado en infraestructura: Index ${index} = ${input.value}`);
         }
     });
 }
+
+

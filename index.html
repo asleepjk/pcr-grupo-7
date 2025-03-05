@@ -2,244 +2,934 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Calculadora de PCR</title>
-    <style>
-        body{
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-			background: white;
-        }
-        /* Estilos mínimos para la demostración */
-        .tabla { display: inline-block; vertical-align: top; margin-right: 10px; margin-top:30px;}
-        .tabla .titulo { background-color: #004085; color: white; text-align: center; }
-        .tabla th, .tabla td { border: 1px solid #dee2e6; padding: 5px; }
-        .tabla th { background-color: #007bff; color: white; }
-        .tabla tfoot { background-color: #ffffe0; }
-        .btn-add { margin-top: 10px; }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-        .tabla-negro { display: inline-block; vertical-align: top; margin-right: 10px; margin-top:30px;}
-        .tabla-negro .titulo { background-color: #0a0a0a; color: white; text-align: center; }
-        .tabla-negro th, .tabla-negro td { border: 1px solid #dee2e6; padding: 5px; }
-        .tabla-negro th { background-color: #5b5b5b; color: white; }
-        .tabla-negro tfoot { background-color: #ffffe0; }
+
+    <title>Pestañas Responsivas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #333;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .tab-button:hover, .tab-button.active {
+            background-color: #555;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border-top: 2px solid #333;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        td input[type="number"] {
+        width: 75px;         /* Ancho fijo para inputs numéricos */
+        max-width: 80px;     /* Máximo ancho permitido */
+        padding: 4px;        /* Reducción de espacio interno */
+        font-size: 0.9rem;   /* Tamaño de fuente más pequeño */
+        box-sizing: border-box; /* Modelo de caja consistente */
+    }
+
+    td {
+        min-width: 80px;     /* Ancho mínimo para celdas */
+        max-width: 120px;    /* Ancho máximo para celdas */
+        padding: 6px !important; /* Reducción de espacio en celdas */
+        border: 1px solid black;
+    }
+
+    th {
+        padding: 8px !important; /* Reducción en cabeceras */
+        font-size: 0.9rem;  /* Texto más compacto */
+        border: 1px solid black;
+        background-color: #f2f2f2;
+    }
+
+    table {
+        table-layout: fixed; /* Distribución uniforme de columnas */
+        word-wrap: break-word; /* Romper texto largo */
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Ajuste específico para celdas con texto largo */
+    td[data-long-text] {
+        font-size: 0.85rem;
+        line-height: 1.2;
+        white-space: normal !important;
+    }
+
+    .nuestras{
+        color: white;
+        background-color: #21a9db;
+    }
+    .enemigo{
+        color: white;
+        background-color: #413a3a;
+    }
+    .subtotal{
+        color: rgb(0, 0, 0);
+        background-color: #ffe821;
+    }
+    .boton{
+        color: white;
+        background-color: green;
+        padding: 8px;
+        font-weight: bold;
+        cursor: pointer;;
+    }
+    .save{
+        color: white;
+        background-color: rgb(7, 43, 223);
+        padding: 8px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .reset{
+        color: white;
+        background-color: rgb(224, 5, 5);
+        padding: 8px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* 🔹 Contenedor de Login */
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/* 🔹 Caja de Login */
+.login-box {
+    background: white;
+    padding: 20px;
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 🔹 Título */
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* 🔹 Inputs */
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 🔹 Botón */
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background: #1e3c72;
+}
+
+/* 🔹 Mensaje de Error */
+#login-error {
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* 🔹 Botón de Cerrar Sesión */
+#logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#logout-btn:hover {
+    background: #c0392b;
+}
+  
     </style>
 </head>
 <body>
-    <div class="tabla" id="tabla-azul">
-        <div class="titulo">AZUL</div>
+
+<!-- 🔹 Pantalla de Login -->
+<div id="login-container">
+    <div class="login-box">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button id="login-btn">Ingresar</button>
+        <p id="login-error">Usuario o contraseña incorrectos.</p>
+    </div>
+</div>
+
+
+<!-- TODO EL CONTENIDO DE TABLAS -->
+<div id="app-content" style="display: none;">
+    <button id="logout-btn" style="position: absolute; top: 10px; right: 10px;">Cerrar Sesión</button>
+
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab(event, 'variables')">Cuadro de Variables</button>
+        <button class="tab-button" onclick="openTab(event, 'politica')">Política</button>
+        <button class="tab-button" onclick="openTab(event, 'militar')">Militar</button>
+        <button class="tab-button" onclick="openTab(event, 'economia')">Economía</button>
+        <button class="tab-button" onclick="openTab(event, 'social')">Social</button>
+        <button class="tab-button" onclick="openTab(event, 'infraestructura')">Infraestructura</button>
+        <button class="tab-button" onclick="openTab(event, 'informacion')">Información</button>
+        <button class="tab-button" onclick="openTab(event, 'fisico')">Físico</button>
+    </div>
+
+    <button class="boton" id="export-table-pdf">Exportar a PDF</button>
+    <button class="save" id="save-all-data">Guardar</button>
+    <button class="reset" onclick="localStorage.clear(); location.reload();">Reiniciar Datos</button>
+
+    <div id="variables" class="tab-content active">
+        
+        <h2>Cuadro de Variables</h2>
         <table>
-            <thead>
-                <tr>
-                    <th>Elemento</th>
-                    <th>CANT</th>
-                    <th>CAP OPER</th>
-                    <th>CANT REAL</th>
-                    <th>COEF</th>
-                    <th>TOTAL</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Las filas de elementos se llenarán dinámicamente -->
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="5">SUB TOTAL ELEMENTOS DE MANIOBRA</td>
-                    <td id="subtotal-azul">0.00</td>
-                </tr>
-            </tfoot>
-        </table>
-        <div id="contenedor-elementos-azul">
-            <!-- Aquí se insertarán dinámicamente los dropdowns para Azul -->
-        </div>
-        <button class="btn-add" onclick="agregarElemento('azul')">Añadir Elemento Azul</button>
-    </div>
-
-    <div class="tabla-negro" id="tabla-negro">
-        <div class="titulo">NEGRO</div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Elemento</th>
-                    <th>CANT</th>
-                    <th>CAP OPER</th>
-                    <th>CANT REAL</th>
-                    <th>COEF</th>
-                    <th>TOTAL</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Las filas de elementos se llenarán dinámicamente -->
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="5">SUB TOTAL ELEMENTOS DE MANIOBRA</td>
-                    <td id="subtotal-negro">0.00</td>
-                </tr>
-            </tfoot>
-        </table>
-        <div id="contenedor-elementos-negro">
-            <!-- Aquí se insertarán dinámicamente los dropdowns para Negro -->
-        </div>
-        <button class="btn-add" onclick="agregarElemento('negro')">Añadir Elemento Negro</button>
-    </div>
-
-    <div class="tabla" id="tabla-comparacion">
-        <div class="titulo">COMPARACIÓN</div>
-        <table>
-            <thead>
-                <tr>
-                    <th>POT COMB MANIOBRA (CON REFUERZOS)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td id="pot-comb-maniobra">0 a 0</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!--------------------------------------------------------------------------->
-
-    <div class="tabla" id="tabla-fuego-azul">
-        <div class="titulo">AZUL</div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Elemento</th>
-                    <th>CANT</th>
-                    <th>CAP OPER</th>
-                    <th>CANT REAL</th>
-                    <th>COEF</th>
-                    <th>TOTAL</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Las filas de elementos se llenarán dinámicamente -->
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="5">SUB TOTAL ELEMENTOS DE APOYO DE FUEGO</td>
-                    <td id="subtotal-fuego-azul">0.00</td>
-                </tr>
-            </tfoot>
-        </table>
-        <div id="contenedor-elementos-fuego-azul">
-            <!-- Aquí se insertarán dinámicamente los dropdowns para Azul -->
-        </div>
-        <button class="btn-add" onclick="agregarElementoFuego('azul')">Añadir Elemento Azul</button>
-    </div>
-
-    <div class="tabla-negro" id="tabla-fuego-negro">
-        <div class="titulo">NEGRO</div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Elemento</th>
-                    <th>CANT</th>
-                    <th>CAP OPER</th>
-                    <th>CANT REAL</th>
-                    <th>COEF</th>
-                    <th>TOTAL</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Las filas de elementos se llenarán dinámicamente -->
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="5">SUB TOTAL ELEMENTOS DE APOYO DE FUEGO</td>
-                    <td id="subtotal-fuego-negro">0.00</td>
-                </tr>
-            </tfoot>
-        </table>
-        <div id="contenedor-elementos-fuego-negro">
-            <!-- Aquí se insertarán dinámicamente los dropdowns para Negro -->
-        </div>
-        <button class="btn-add" onclick="agregarElementoFuego('negro')">Añadir Elemento Negro</button>
-    </div>
-
-    <div class="tabla" id="tabla-resumen">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="2">POTENCIA COMBATIVA DESTRUCTIVA CON REFUERZO (Maniobra + Fuego)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td id="potencia-combativa-azul">0.00</td>
-                    <td id="potencia-combativa-negro">0.00</td>
-                </tr>
-                <tr>
-                    <td colspan="2" id="proporcion-combativa">0 a 1 a favor de las Fuerzas Amigas</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Tabla de factores -->
-    <div class="tabla">
-        <table id="tabla-factores">
-            <thead>
-                <tr>
-                    <th>FACTORES</th>
-                    <th>FZA AMIGA</th>
-                    <th>ENO</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Filas para cada factor con inputs para los valores -->
-                <tr><td>INTELIGENCIA</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
-                <tr><td>SOSTENIMIENTO</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
-                <tr><td>PROTECCION (AAAe)</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
-                <tr><td>C4I</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
-                <tr><td>INFORMACION (GE)</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
-                <tr><td>LIDERAZGO</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
-                <tr><td>ING COMBATE</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
-                <tr><td>FFEE</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
-                <tr><td>GUERRA NBQ</td><td><input type="number" class="fza-amiga" value="0"></td><td><input type="number" class="eno" value="0"></td></tr>
-                <!-- ... Repetir para los otros 7 factores ... -->
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td>TOTAL</td>
-                    <td id="total-fza-amiga">0.00</td>
-                    <td id="total-eno">0.00</td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-
-
-    <!-- Cuadro resumen de potencia combativa cuantitativa del refuerzo -->
-<div class="tabla">
-    <table id="tabla-potencia-combativa">
-        <thead>
             <tr>
-                <th colspan="3">POTENCIA COMBATIVA CUANTITATIVA DEL REFUERZO CONSIDERANDO FACTOR MULTIPLICADOR</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td id="pcc-refuerzo-azul">0.0</td> <!-- Valor PCD Refuerzo para Azul -->
-                <td id="multiplicador-azul">0.0</td> <!-- Multiplicador para Azul -->
-                <td id="pcc-azul">0.0</td> <!-- PCC para Azul, calculado -->
+                <th rowspan="2">VARIABLE OPERACIONAL</th>
+                <th rowspan="2">FACTORES</th>
+                <th colspan="3" class="nuestras">NUESTRAS</th>
+                <th colspan="3" class="enemigo">ENEMIGO</th>
+                <th rowspan="2">POT COMB</th>
             </tr>
             <tr>
-                <td id="pcc-refuerzo-negro">0.0</td> <!-- Valor PCD Refuerzo para Negro -->
-                <td id="multiplicador-negro">0.0</td> <!-- Multiplicador para Negro -->
-                <td id="pcc-negro">0.0</td> <!-- PCC para Negro, calculado -->
+                <th>CANT</th>
+                <th>COEF</th>
+                <th>TOTAL</th>
+                <th>CANT</th>
+                <th>COEF</th>
+                <th>TOTAL</th>
             </tr>
-        </tbody>
-        <tfoot>
             <tr>
-                <td colspan="3" id="resumen-pcc">0 a 1 a favor de las Fuerzas Enemigas</td> <!-- Resumen final, calculado -->
+                <td rowspan="5">POLÍTICA</td>
+                <td>GOBIERNO CENTRAL</td>
+                <td><input type="number" id="cant-gobierno-central_master"></td>
+                <td><input type="number" value="2"></td>
+                <td><input type="number" id="total-gobierno-central_master" readonly></td>
+                <td><input type="number" id="cant-gobierno-central-enemigo_master"></td>
+                <td><input type="number" value="2"></td>
+                <td><input type="number" id="total-gobierno-central-enemigo_master" readonly></td>
+                <td rowspan="5" style="vertical-align: bottom;"><input type="number" id="potcomb-politica_master"></td>
             </tr>
-        </tfoot>
-    </table>
+            <tr>
+                <td>RELACION CON PARTIDOS POLITICOS Y GRUPOS DE INTERES</td>
+                <td><input type="number" id="cant-partidos-politicos_master"></td>
+                <td><input type="number" value="1"></td>
+                <td><input type="number" id="total-partidos-politicos_master" readonly></td>
+                <td><input type="number" id="cant-partidos-politicos-enemigo_master"></td>
+                <td><input type="number" value="1"></td>
+                <td><input type="number" id="total-partidos-politicos-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>RELACION CON GOBIERNOS LOCALES</td>
+                <td><input type="number" id="cant-gobiernos-locales_master"></td>
+                <td><input type="number" value="1"></td>
+                <td><input type="number" id="total-gobiernos-locales_master" readonly></td>
+                <td><input type="number" id="cant-gobiernos-locales-enemigo_master"></td>
+                <td><input type="number" value="1"></td>
+                <td><input type="number" id="total-gobiernos-locales-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>RELACIONES INTERNACIONALES</td>
+                <td><input type="number" id="cant-relaciones-internacionales_master"></td>
+                <td><input type="number" value="1"></td>
+                <td><input type="number" id="total-relaciones-internacionales_master" readonly></td>
+                <td><input type="number" id="cant-relaciones-internacionales-enemigo_master"></td>
+                <td><input type="number" value="1"></td>
+                <td><input type="number" id="total-relaciones-internacionales-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td class="subtotal"><strong>Subtotal</strong></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras_master"readonly></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo_master" readonly></td>
+            </tr>
+
+            <!-- MILITAR-->
+            <tr>
+                <td rowspan="6">MILITAR</td>
+                <td>FUERZA TERRESTRE</td>
+                <td><input type="number" id="cant-ft_master" readonly></td>
+                <td><input type="number" id="coef-ft_master" value="1" readonly></td>
+                <td><input type="number" id="total-ft_master" readonly></td>
+                <td><input type="number" id="cant-ft-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-ft-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-ft-enemigo_master" readonly></td>
+                <td rowspan="6" style="vertical-align: bottom;"><input type="number" id="potcomb-militar_master" readonly></td>
+            </tr>
+            <tr>
+                <td>FUERZA NAVAL</td>
+                <td><input type="number" id="cant-fn_master" readonly></td>
+                <td><input type="number" id="coef-fn_master" value="1" readonly></td>
+                <td><input type="number" id="total-fn_master" readonly></td>
+                <td><input type="number" id="cant-fn-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-fn-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-fn-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>FUERZA AÉREA</td>
+                <td><input type="number" id="cant-fa_master" readonly></td>
+                <td><input type="number" id="coef-fa_master" value="1" readonly></td>
+                <td><input type="number" id="total-fa_master" readonly></td>
+                <td><input type="number" id="cant-fa-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-fa-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-fa-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>EXPERIENCIA EN COMBATE</td>
+                <td><input type="number" id="cant-experiencia_master" readonly></td>
+                <td><input type="number" id="coef-experiencia_master" value="1" readonly></td>
+                <td><input type="number" id="total-experiencia_master" readonly></td>
+                <td><input type="number" id="cant-experiencia-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-experiencia-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-experiencia-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>LIDERAZGO</td>
+                <td><input type="number" id="cant-liderazgo_master" readonly></td>
+                <td><input type="number" id="coef-liderazgo_master" value="1" readonly></td>
+                <td><input type="number" id="total-liderazgo_master" readonly></td>
+                <td><input type="number" id="cant-liderazgo-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-liderazgo-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-liderazgo-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td class="subtotal"><strong>Subtotal</strong></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras-militar_master" readonly></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo-militar_master" readonly></td>
+            </tr>
+            <!-- MILITAR -->
+             <!-- ECONOMIA -->
+             <tr>
+                <td rowspan="7">ECONOMÍA</td>
+                <td>PRODUCCIÓN</td>
+                <td><input type="number" id="cant-produccion-economia_master" readonly></td>
+                <td><input type="number" id="coef-produccion-economia_master" value="1" readonly></td>
+                <td><input type="number" id="total-produccion-economia_master" readonly></td>
+                <td><input type="number" id="cant-produccion-economia-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-produccion-economia-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-produccion-economia-enemigo_master" readonly></td>
+                <td rowspan="7" style="vertical-align: bottom;"><input type="number" id="potcomb-politica-economia_master" readonly></td>
+            </tr>
+            <tr>
+                <td>DISTRIBUCIÓN</td>
+                <td><input type="number" id="cant-distribucion-economia_master" readonly></td>
+                <td><input type="number" id="coef-distribucion-economia_master" value="1" readonly></td>
+                <td><input type="number" id="total-distribucion-economia_master" readonly></td>
+                <td><input type="number" id="cant-distribucion-economia-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-distribucion-economia-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-distribucion-economia-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>CONSUMO</td>
+                <td><input type="number" id="cant-consumo-economia_master" readonly></td>
+                <td><input type="number" id="coef-consumo-economia_master" value="1" readonly></td>
+                <td><input type="number" id="total-consumo-economia_master" readonly></td>
+                <td><input type="number" id="cant-consumo-economia-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-consumo-economia-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-consumo-economia-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>GASTO EN DEFENSA</td>
+                <td><input type="number" id="cant-defensa-economia_master" readonly></td>
+                <td><input type="number" id="coef-defensa-economia_master" value="3" readonly></td>
+                <td><input type="number" id="total-defensa-economia_master" readonly></td>
+                <td><input type="number" id="cant-defensa-economia-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-defensa-economia-enemigo_master" value="3" readonly></td>
+                <td><input type="number" id="total-defensa-economia-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>RESERVAS INTERNACIONALES</td>
+                <td><input type="number" id="cant-reserva-economia_master" readonly></td>
+                <td><input type="number" id="coef-reserva-economia_master" value="3" readonly></td>
+                <td><input type="number" id="total-reserva-economia_master" readonly></td>
+                <td><input type="number" id="cant-reserva-economia-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-reserva-economia-enemigo_master" value="3" readonly></td>
+                <td><input type="number" id="total-reserva-economia-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>ECONOMÍA INFORMAL</td>
+                <td><input type="number" id="cant-informal-economia_master" readonly></td>
+                <td><input type="number" id="coef-informal-economia_master" value="1" readonly></td>
+                <td><input type="number" id="total-informal-economia_master" readonly></td>
+                <td><input type="number" id="cant-informal-economia-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-informal-economia-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-informal-economia-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td class="subtotal"><strong>Subtotal</strong></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras-economia_master" readonly></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo-economia_master" readonly></td>
+            </tr>
+            <!--ECONOMIA-->
+            <!--SOCIAL-->
+            <tr>
+                <td rowspan="4">SOCIAL</td>
+                <td>IDENTIDAD SOCIAL</td>
+                <td><input type="number" id="cant-identidad_master" readonly></td>
+                <td><input type="number" id="coef-identidad_master" value="2" readonly></td>
+                <td><input type="number" id="total-identidad_master" readonly></td>
+                <td><input type="number" id="cant-identidad-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-identidad-enemigo_master" value="2" readonly></td>
+                <td><input type="number" id="total-identidad-enemigo_master" readonly></td>
+                <td rowspan="4" style="vertical-align: bottom;"><input type="number" id="potcomb-social_master" readonly></td>
+            </tr>
+            <tr>
+                <td>GESTIÓN DEL SUSTENTO</td>
+                <td><input type="number" id="cant-gestion_master" readonly></td>
+                <td><input type="number" id="coef-gestion_master" value="1" readonly></td>
+                <td><input type="number" id="total-gestion_master" readonly></td>
+                <td><input type="number" id="cant-gestion-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-gestion-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-gestion-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>RECURSOS CRÍTICOS</td>
+                <td><input type="number" id="cant-recursos_master" readonly></td>
+                <td><input type="number" id="coef-recursos_master" value="2" readonly></td>
+                <td><input type="number" id="total-recursos_master" readonly></td>
+                <td><input type="number" id="cant-recursos-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-recursos-enemigo_master" value="2" readonly></td>
+                <td><input type="number" id="total-recursos-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td class="subtotal"><strong>Subtotal</strong></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras-social_master" readonly></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo-social_master" readonly></td>
+            </tr>
+            <!--SOCIAL-->
+            <!-- INFRAESTRUCTURA-->
+            <tr>
+                <td rowspan="7">INFRAESTRUCTURA</td>
+                <td>CENTRAL HIDROELÉCTRICA</td>
+                <td><input type="number" id="cant-hidroelectrica_master" readonly></td>
+                <td><input type="number" id="coef-hidroelectrica_master" value="1" readonly></td>
+                <td><input type="number" id="total-hidroelectrica_master" readonly></td>
+                <td><input type="number" id="cant-hidroelectrica-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-hidroelectrica-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-hidroelectrica-enemigo_master" readonly></td>
+                <td rowspan="7" style="vertical-align: bottom;"><input type="number" id="potcomb-politica-infraestructura_master" readonly></td>
+            </tr>
+            <tr>
+                <td>REPRESAS</td>
+                <td><input type="number" id="cant-represas_master" readonly></td>
+                <td><input type="number" id="coef-represas_master" value="1" readonly></td>
+                <td><input type="number" id="total-represas_master" readonly></td>
+                <td><input type="number" id="cant-represas-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-represas-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-represas-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>REFINERÍA</td>
+                <td><input type="number" id="cant-refineria_master" readonly></td>
+                <td><input type="number" id="coef-refineria_master" value="1" readonly></td>
+                <td><input type="number" id="total-refineria_master" readonly></td>
+                <td><input type="number" id="cant-refineria-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-refineria-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-refineria-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>PUERTOS</td>
+                <td><input type="number" id="cant-puertos_master" readonly></td>
+                <td><input type="number" id="coef-puertos_master" value="2" readonly></td>
+                <td><input type="number" id="total-puertos_master" readonly></td>
+                <td><input type="number" id="cant-puertos-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-puertos-enemigo_master" value="2" readonly></td>
+                <td><input type="number" id="total-puertos-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>AEROPUERTOS</td>
+                <td><input type="number" id="cant-aeropuertos_master" readonly></td>
+                <td><input type="number" id="coef-aeropuertos_master" value="2" readonly></td>
+                <td><input type="number" id="total-aeropuertos_master" readonly></td>
+                <td><input type="number" id="cant-aeropuertos-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-aeropuertos-enemigo_master" value="2" readonly></td>
+                <td><input type="number" id="total-aeropuertos-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>RED VIAL</td>
+                <td><input type="number" id="cant-vial_master" readonly></td>
+                <td><input type="number" id="coef-vial_master" value="1" readonly></td>
+                <td><input type="number" id="total-vial_master" readonly></td>
+                <td><input type="number" id="cant-vial-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-vial-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-vial-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td class="subtotal"><strong>Subtotal</strong></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras-infraestructura_master" readonly></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo-infraestructura_master" readonly></td>
+            </tr>
+             <!-- INFRAESTRUCTURA-->
+             <!--INFOMRACION-->
+             <tr>
+                <td rowspan="5">INFORMACIÓN</td>
+                <td>MEMBRESIAS INTERNACIONALES DE INFORMACION GLOBAL</td>
+                <td><input type="number" id="cant-membresias_master" readonly></td>
+                <td><input type="number" id="coef-membresias_master" value="1" readonly></td>
+                <td><input type="number" id="total-membresias_master" readonly></td>
+                <td><input type="number" id="cant-membresias-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-membresias-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-membresias-enemigo_master" readonly></td>
+                <td rowspan="5" style="vertical-align: bottom;"><input type="number" id="potcomb-informacion_master" readonly></td>
+            </tr>
+            <tr>
+                <td>AGENCIAS DE INTELIGENCIAS</td>
+                <td><input type="number" id="cant-agencias_master" readonly></td>
+                <td><input type="number" id="coef-agencias_master" value="1" readonly></td>
+                <td><input type="number" id="total-agencias_master" readonly></td>
+                <td><input type="number" id="cant-agencias-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-agencias-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-agencias-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>MEDIOS DE COMUNICACIÓN</td>
+                <td><input type="number" id="cant-medios_master" readonly></td>
+                <td><input type="number" id="coef-medios_master" value="1" readonly></td>
+                <td><input type="number" id="total-medios_master" readonly></td>
+                <td><input type="number" id="cant-medios-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-medios-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-medios-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>INFORMACIONES DE DEFENSA</td>
+                <td><input type="number" id="cant-infodef_master" readonly></td>
+                <td><input type="number" id="coef-infodef_master" value="1" readonly></td>
+                <td><input type="number" id="total-infodef_master" readonly></td>
+                <td><input type="number" id="cant-infodef-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-infodef-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-infodef-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td class="subtotal"><strong>Subtotal</strong></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras-informacion_master" readonly></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo-informacion_master" readonly></td>
+            </tr>
+             <!--INFOMRACION-->
+             <!--FISICO-->
+             <tr>
+                <td rowspan="7">FÍSICO</td>
+                <td>RELIEVE</td>
+                <td><input type="number" id="cant-relieve_master" readonly></td>
+                <td><input type="number" id="coef-relieve_master" value="1" readonly></td>
+                <td><input type="number" id="total-relieve_master" readonly></td>
+                <td><input type="number" id="cant-relieve-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-relieve-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-relieve-enemigo_master" readonly></td>
+                <td rowspan="7" style="vertical-align: bottom;"><input type="number" id="potcomb-politica-fisico_master" readonly></td>
+            </tr>
+            <tr>
+                <td>VEGETACIÓN</td>
+                <td><input type="number" id="cant-vegetacion_master" readonly></td>
+                <td><input type="number" id="coef-vegetacion_master" value="2" readonly></td>
+                <td><input type="number" id="total-vegetacion_master" readonly></td>
+                <td><input type="number" id="cant-vegetacion-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-vegetacion-enemigo_master" value="2" readonly></td>
+                <td><input type="number" id="total-vegetacion-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>HIDROGRAFÍA</td>
+                <td><input type="number" id="cant-hidrografia_master" readonly></td>
+                <td><input type="number" id="coef-hidrografia_master" value="2" readonly></td>
+                <td><input type="number" id="total-hidrografia_master" readonly></td>
+                <td><input type="number" id="cant-hidrografia-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-hidrografia-enemigo_master" value="2" readonly></td>
+                <td><input type="number" id="total-hidrografia-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>OBRAS DE ARTE</td>
+                <td><input type="number" id="cant-arte_master" readonly></td>
+                <td><input type="number" id="coef-arte_master" value="1" readonly></td>
+                <td><input type="number" id="total-arte_master" readonly></td>
+                <td><input type="number" id="cant-arte-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-arte-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-arte-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>LOCALIDADES</td>
+                <td><input type="number" id="cant-localidades_master" readonly></td>
+                <td><input type="number" id="coef-localidades_master" value="1" readonly></td>
+                <td><input type="number" id="total-localidades_master" readonly></td>
+                <td><input type="number" id="cant-localidades-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-localidades-enemigo_master" value="1" readonly></td>
+                <td><input type="number" id="total-localidades-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td>NATURALEZA DE SUELO</td>
+                <td><input type="number" id="cant-naturaleza_master" readonly></td>
+                <td><input type="number" id="coef-naturaleza_master" value="2" readonly></td>
+                <td><input type="number" id="total-naturaleza_master" readonly></td>
+                <td><input type="number" id="cant-naturaleza-enemigo_master" readonly></td>
+                <td><input type="number" id="coef-naturaleza-enemigo_master" value="2" readonly></td>
+                <td><input type="number" id="total-naturaleza-enemigo_master" readonly></td>
+            </tr>
+            <tr>
+                <td class="subtotal"><strong>Subtotal</strong></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras-fisico_master" readonly></td>
+                <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo-fisico_master" readonly></td>
+            </tr>
+             <!--FISICO-->
+        </table>
+    </div>
 </div>
     
 
+    <div id="politica" class="tab-content"></div>
+    <div id="militar" class="tab-content"></div>
+    <div id="economia" class="tab-content"></div>
+    <div id="social" class="tab-content"></div>
+    <div id="infraestructura" class="tab-content"></div>
+    <div id="informacion" class="tab-content"></div>
+    <div id="fisico" class="tab-content"></div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("🔄 Cargando todos los datos al iniciar...");
+    loadAllTableData(); // 🔥 Cargar datos guardados al inicio
+
+    // Botón para guardar toda la información
+    document.getElementById("save-all-data").addEventListener("click", function () {
+        console.log("💾 Guardando todos los datos...");
+        saveAllData();
+        alert("Datos guardados correctamente.");
+    });
+});
+
+// 🔹 Función para guardar los datos de todas las pestañas
+function saveAllData() {
+    saveAllTableDataPolitica();
+    saveAllTableDataMilitar();
+    saveAllTableDataEconomia();
+    saveAllTableDataSocial();
+    saveAllTableDataInfraestructura();
+    saveAllTableDataInformacion();
+    saveAllTableDataFisico();
+    saveAllTableDataIndex();
+}
+
+// 🔹 Guardar datos del `index.html`
+function saveAllTableDataIndex() {
+    let tableData = [];
+
+    document.querySelectorAll("#index input[type='number']").forEach((input, index) => {
+        tableData[index] = input.value;
+        console.log(`✅ Guardado en Index: Index ${index} = ${input.value}`);
+    });
+
+    localStorage.setItem("allTableDataIndex", JSON.stringify(tableData));
+    console.log("📦 Datos guardados en localStorage para Index:", tableData);
+}
+
+// 🔹 Cargar datos del `index.html`
+function loadAllTableData() {
+    let storedData = JSON.parse(localStorage.getItem("allTableDataIndex")) || [];
+    console.log("📥 Cargando datos de Index desde localStorage:", storedData);
+
+    document.querySelectorAll("#index input[type='number']").forEach((input, index) => {
+        if (storedData[index] !== undefined) {
+            input.value = storedData[index];
+            console.log(`🔄 Restaurado en Index: Index ${index} = ${input.value}`);
+        }
+    });
+}
+
+// CARGAR TODO DESDE EL PRINCIPIO
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("🔄 Cargando todos los datos al iniciar...");
+    loadAllTableData(); // 🔥 Cargar datos guardados al inicio
+
+    document.getElementById("save-all-data").addEventListener("click", function () {
+        console.log("💾 Guardando todos los datos...");
+        saveAllData();
+        //alert("Datos de todas las pestañas guardados correctamente.");
+    });
+});
+
+  
+// 🔹 Función para abrir pestañas y cargar HTMLs solo cuando se haga clic
+function openTab(event, tabId) {
+    var i, tabcontent, tabbuttons;
+
+    // Desactivar todas las pestañas y botones
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+    }
+
+    tabbuttons = document.getElementsByClassName("tab-button");
+    for (i = 0; i < tabbuttons.length; i++) {
+        tabbuttons[i].classList.remove("active");
+    }
+
+    // Activar la pestaña y botón clickeado
+    document.getElementById(tabId).classList.add("active");
+    event.currentTarget.classList.add("active");
+
+    // Cargar contenido solo cuando la pestaña se abre por primera vez
+    if (!document.getElementById(tabId).innerHTML) {
+        console.log(`📥 Cargando ${tabId}.html...`);
+        fetch(`${tabId}.html`)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(tabId).innerHTML = data;
+                setTimeout(() => {
+                    console.log(`🔄 Restaurando valores en ${tabId}...`);
+                    if (tabId === "politica") {
+                        addTableListeners();
+                        loadAllTableDataPolitica();
+                    } else if (tabId === "militar") {
+                        addTableListenersMilitar();
+                        loadAllTableDataMilitar();
+                    }
+                    else if (tabId === "economia") {
+                        addTableListenersEconomia();
+                        loadAllTableDataEconomia();
+                    }
+                    else if (tabId === "social") {
+                        addTableListenersSocial();
+                        loadAllTableDataSocial();
+                    }
+                    else if (tabId === "infraestructura") {
+                        addTableListenersInfraestructura();
+                        loadAllTableDataInfraestructura();
+                    }
+                    else if (tabId === "informacion") {
+                        addTableListenersInformacion();
+                        loadAllTableDataInformacion();
+                    }
+                    else if (tabId === "fisico") {
+                        addTableListenersFisico();
+                        loadAllTableDataFisico();
+                    }
+                }, 100);
+            });
+    }
+}
+        </script>
+        
+
+<script>
+document.getElementById("export-table-pdf").addEventListener("click", function() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF('p', 'mm', 'a4');
+
+    // Seleccionamos la pestaña activa
+    const activeTab = document.querySelector(".tab-content.active");
+    if (!activeTab) {
+        alert("No hay tablas visibles para exportar.");
+        return;
+    }
+
+    html2canvas(activeTab, {
+        scale: 2, // Aumenta la calidad de la imagen
+        useCORS: true
+    }).then(canvas => {
+        let imgData = canvas.toDataURL("image/png");
+        let imgWidth = 210; // Ancho A4 en mm
+        let pageHeight = 297; // Alto A4 en mm
+        let imgHeight = (canvas.height * imgWidth) / canvas.width; // Escalar altura
+        let heightLeft = imgHeight;
+        let position = 10; // Margen inicial
+
+        doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight - 20; // Ajuste de margen inferior
+
+        while (heightLeft > 0) {
+            doc.addPage();
+            position = 10;
+            doc.addImage(imgData, "PNG", 0, position - heightLeft, imgWidth, imgHeight);
+            heightLeft -= pageHeight - 20;
+        }
+
+        doc.save("tablas.pdf");
+    });
+});
+
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            assignIDsToInputs(); // Asegurar que todos los inputs tengan un ID único
+            loadAllTableData();  // Cargar datos guardados
+        
+        
+            // Detectar cambios en los inputs y guardarlos automáticamente
+            document.body.addEventListener("input", function (event) {
+                if (event.target.tagName === "INPUT" && event.target.type === "number") {
+                    saveAllTableData(false); // Guardar cambios en localStorage
+                }
+            });
+        });
+        
+        // 🔹 Asignar IDs únicos a los inputs que no tienen uno
+        function assignIDsToInputs() {
+            let counter = 0;
+            document.querySelectorAll("input[type='number']").forEach(input => {
+                if (!input.id) {
+                    input.id = "autoInput_" + counter; // Asignar un ID único
+                    counter++;
+                }
+            });
+        }
+        
+        // 🔹 Guardar TODOS los valores de los inputs de TODAS las pestañas en localStorage
+        function saveAllTableData(initialSave = false) {
+            let tableData = JSON.parse(localStorage.getItem("allTableData")) || {};
+        
+            // Guardar los valores visibles en index.html
+            document.querySelectorAll("input[type='number']").forEach(input => {
+                if (initialSave && !tableData.hasOwnProperty(input.id)) {
+                    tableData[input.id] = input.value || input.defaultValue;
+                } else if (!initialSave) {
+                    tableData[input.id] = input.value;
+                }
+            });
+        
+            // 🔥 Guardar los valores de los iframes o HTMLs cargados dinámicamente
+            document.querySelectorAll(".tab-content iframe").forEach(iframe => {
+                try {
+                    let iframeInputs = iframe.contentDocument.querySelectorAll("input[type='number']");
+                    iframeInputs.forEach(input => {
+                        tableData[input.id] = input.value;
+                    });
+                } catch (e) {
+                    console.warn("No se pudo acceder a una pestaña externa:", e);
+                }
+            });
+        
+            localStorage.setItem("allTableData", JSON.stringify(tableData));
+        }
+        
+        // 🔹 Cargar TODOS los valores de los inputs de TODAS las pestañas
+        function loadAllTableData() {
+            let storedData = JSON.parse(localStorage.getItem("allTableData")) || {};
+        
+            document.querySelectorAll("input[type='number']").forEach(input => {
+                if (storedData.hasOwnProperty(input.id)) {
+                    input.value = storedData[input.id];
+                } else {
+                    input.value = input.defaultValue;
+                }
+            });
+        
+            // 🔥 Cargar valores en los HTMLs externos cuando se abran
+            document.querySelectorAll(".tab-content iframe").forEach(iframe => {
+                try {
+                    let iframeInputs = iframe.contentDocument.querySelectorAll("input[type='number']");
+                    iframeInputs.forEach(input => {
+                        if (storedData.hasOwnProperty(input.id)) {
+                            input.value = storedData[input.id];
+                        }
+                    });
+                } catch (e) {
+                    console.warn("No se pudo cargar una pestaña externa:", e);
+                }
+            });
+        }
+        </script>
+        
+        
+
+    
+
     <script src="script.js"></script>
+    <script src="economia.js"></script>
+    <script src="infraestructura.js"></script>
+    <script src="fisico.js"></script>
+    <script src="informacion.js"></script>
+    <script src="social.js"></script>
+    <script src="militar.js"></script>
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loginContainer = document.getElementById("login-container");
+    const appContent = document.getElementById("app-content");
+    const loginBtn = document.getElementById("login-btn");
+    const logoutBtn = document.getElementById("logout-btn");
+    const loginError = document.getElementById("login-error");
+
+    // 🔹 Usuario y contraseña predefinidos (se pueden cambiar)
+    const USERS = {
+        "limahualla": "esge2025@", 
+        "usuario": "password@@"
+    };
+
+    // 🔹 Verificar si el usuario ya ha iniciado sesión
+    if (localStorage.getItem("loggedInUser")) {
+        showApp();
+    }
+
+    // 🔹 Evento para iniciar sesión
+    loginBtn.addEventListener("click", function () {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (USERS[username] && USERS[username] === password) {
+            localStorage.setItem("loggedInUser", username);
+            showApp();
+        } else {
+            loginError.style.display = "block"; // Mostrar mensaje de error
+        }
+    });
+
+    // 🔹 Evento para cerrar sesión
+    logoutBtn.addEventListener("click", function () {
+        localStorage.removeItem("loggedInUser");
+        location.reload(); // Recargar la página para volver al login
+    });
+
+    // 🔹 Mostrar la aplicación después de iniciar sesión
+    function showApp() {
+        loginContainer.style.display = "none";
+        appContent.style.display = "block";
+    }
+});
+    </script>
+    
 </body>
 </html>

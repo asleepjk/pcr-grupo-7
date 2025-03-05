@@ -1,0 +1,299 @@
+<h2>Variables de Información</h2>
+<table id="informacion_table">
+    <tr>
+        <th rowspan="2">VARIABLE OPERACIONAL</th>
+        <th rowspan="2">FACTORES</th>
+        <th colspan="3" class="nuestras">NUESTRAS</th>
+        <th colspan="3" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td rowspan="7">INFORMACIÓN</td>
+        <td>MEMBRESIAS INTERNACIONALES DE INFORMACION GLOBAL</td>
+        <td><input type="number" id="cant-membresias" readonly></td>
+        <td><input type="number" id="coef-membresias" value="1" readonly></td>
+        <td><input type="number" id="total-membresias" readonly></td>
+        <td><input type="number" id="cant-membresias-enemigo" readonly></td>
+        <td><input type="number" id="coef-membresias-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-membresias-enemigo" readonly></td>
+        <td rowspan="7" style="vertical-align: bottom;"><input type="number" id="potcomb-informacion" readonly></td>
+    </tr>
+    <tr>
+        <td>AGENCIAS DE INTELIGENCIAS</td>
+        <td><input type="number" id="cant-agencias" readonly></td>
+        <td><input type="number" id="coef-agencias" value="1" readonly></td>
+        <td><input type="number" id="total-agencias" readonly></td>
+        <td><input type="number" id="cant-agencias-enemigo" readonly></td>
+        <td><input type="number" id="coef-agencias-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-agencias-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>MEDIOS DE COMUNICACIÓN</td>
+        <td><input type="number" id="cant-medios" readonly></td>
+        <td><input type="number" id="coef-medios" value="1" readonly></td>
+        <td><input type="number" id="total-medios" readonly></td>
+        <td><input type="number" id="cant-medios-enemigo" readonly></td>
+        <td><input type="number" id="coef-medios-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-medios-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>INFORMACIONES DE DEFENSA</td>
+        <td><input type="number" id="cant-infodef" readonly></td>
+        <td><input type="number" id="coef-infodef" value="1" readonly></td>
+        <td><input type="number" id="total-infodef" readonly></td>
+        <td><input type="number" id="cant-infodef-enemigo" readonly></td>
+        <td><input type="number" id="coef-infodef-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-infodef-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras-informacion" readonly></td>
+        <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo-informacion" readonly></td>
+    </tr>
+</table>
+
+
+</br>
+<!-- MEMBRESIA -->
+<table id="membresias" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">MEMBRESIAS INTERNACIONALES</br>DE INFORMACION GLOBAL</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>RENDIMIENTO</th>
+        <th>APROBACION</br>ENCUESTA %</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>APROBACION</br>ENCUESTA %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CAPACIDAD DE LAS MEMBRESÍAS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>CANTIDAD DE MEMBRESÍAS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- AGENCIAS -->
+
+<table id="agencias" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">AGENCIAS DE INTELIGENCIA</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>APROBACION</br>ENCUESTA %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>APROBACION</br>ENCUESTA %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CAPACIDAD DE LAS AGENCIAS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>CANTIDAD DE AGENCIAS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- MEDIOS -->
+<table id="medios" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">MEDIOS DE COMUNICACIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>APROBACION</br>ENCUESTA %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>APROBACION</br>ENCUESTA %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CAPACIDAD DIFUSION DEL MEDIO DE COMUNICACIÓN</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>RELACION DEL GOBIERNO CON LA PRENSA</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>CANTIDAD DE MEDIOS DE COMUNICACIÓN</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- INFODEF -->
+<table id="infodef" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">INFORMACIONES DE DEFENSA</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>APROBACION</br>ENCUESTA %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>APROBACION</br>ENCUESTA %</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CAPACIDAD DE ALMACENAJE DE INFORMACION DE DEFENSA</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>CAPACIDAD DE CONTRARESTAR CONTRAINTELIGENCIA</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+

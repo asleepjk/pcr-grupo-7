@@ -1,17 +1,17 @@
-function addTableListeners() {
+function addTableListenersSocial() {
     const tablasSecundarias = document.querySelectorAll(".tabla-secundaria"); 
 
     tablasSecundarias.forEach(tabla => {
         tabla.addEventListener("input", function (event) {
             if (event.target.tagName === "INPUT") {
-                calcularTablaSecundaria(tabla.id);
+                calcularTablaSecundariaSocial(tabla.id);
             }
         });
     });
 }
 
 // Función para calcular cualquier tabla secundaria
-function calcularTablaSecundaria(tablaID) {
+function calcularTablaSecundariaSocial(tablaID) {
     let filas = document.querySelectorAll(`#${tablaID} tbody tr`);
 
     let subtotalNuestras = 0;
@@ -59,17 +59,16 @@ function calcularTablaSecundaria(tablaID) {
     }
 
     // Actualizar la tabla principal después de recalcular la tabla secundaria
-    actualizarTablaPrincipal();
+    actualizarTablaPrincipalSocial();
 }
 
 // Función para actualizar la tabla principal con los valores de las secundarias
-function actualizarTablaPrincipal() {
+function actualizarTablaPrincipalSocial() {
     const factores = {
-        "gobierno-central_politica": "gobierno-central",
-        "partidos-politicos_politica": "partidos-politicos",
-        "gobiernos-locales_politica": "gobiernos-locales",
-        "relaciones-internacionales_politica": "relaciones-internacionales"
-    };
+        "identidad": "identidad",
+        "gestion": "gestion",
+        "recursos": "recursos"
+    }
 
     let totalNuestras = 0;
     let totalEnemigo = 0;
@@ -94,8 +93,7 @@ function actualizarTablaPrincipal() {
         document.getElementById(`cant-${idBase}-enemigo`).value = subtotalEnemigo.toFixed(2);
         document.getElementById(`total-${idBase}-enemigo`).value = totalEnemigoFactor.toFixed(2);
 
-        //Agregar a la tabla maestra
-
+        // Agregar a tabla maestra
         document.getElementById(`cant-${idBase}_master`).value = subtotalNuestras.toFixed(2);
         document.getElementById(`total-${idBase}_master`).value = totalNuestrasFactor.toFixed(2);
 
@@ -108,58 +106,59 @@ function actualizarTablaPrincipal() {
     });
 
     // Insertamos los subtotales en la tabla principal
-    document.getElementById("subtotal-nuestras").value = totalNuestras.toFixed(2);
-    document.getElementById("subtotal-enemigo").value = totalEnemigo.toFixed(2);
+    document.getElementById("subtotal-nuestras-social").value = totalNuestras.toFixed(2);
+    document.getElementById("subtotal-enemigo-social").value = totalEnemigo.toFixed(2);
 
-    //Agregar a la tabla maestra
-
-    document.getElementById("subtotal-nuestras_master").value = totalNuestras.toFixed(2);
-    document.getElementById("subtotal-enemigo_master").value = totalEnemigo.toFixed(2);
+    // Agregar a tabla maestra
+    document.getElementById("subtotal-nuestras-social_master").value = totalNuestras.toFixed(2);
+    document.getElementById("subtotal-enemigo-social_master").value = totalEnemigo.toFixed(2);
 
     // Calcular POT COMB
     let potComb = totalNuestras !== 0 ? totalEnemigo / totalNuestras : 0;
-    document.getElementById("potcomb-politica").value = potComb.toFixed(2);
-    // Agregar a la tabla maestra
-    document.getElementById("potcomb-politica_master").value = potComb.toFixed(2);
+    document.getElementById("potcomb-social").value = potComb.toFixed(2);
+    //Agregar a tabla maestra
+    document.getElementById("potcomb-social_master").value = potComb.toFixed(2);
 }
+
 
 // GUARDAR DATOS
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
-        console.log("🔹 Restaurando valores en política...");
-        loadAllTableDataPolitica(); // 🔥 Restaurar valores SOLO de Política
+        console.log("🔹 Restaurando valores en social...");
+        loadAllTableDataSocial(); // 🔥 Restaurar valores SOLO de social
     }, 100);
 
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        input.dataset.index = `politica_${index}`;
+    document.querySelectorAll("#social input[type='number']").forEach((input, index) => {
+        input.dataset.index = `social_${index}`;
         input.addEventListener("input", function () {
-            console.log(`📝 Guardando en Política: Index ${index} = ${input.value}`);
+            console.log(`📝 Guardando en social: Index ${index} = ${input.value}`);
         });
     });
 });
 
-// 🔹 Guardar SOLO los valores de Política en `localStorage`
-function saveAllTableDataPolitica() {
-    let tableData = [];
+// 🔹 Guardar SOLO los valores de social en `localStorage`
+function saveAllTableDataSocial() {
+    let tableData_social = [];
 
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        tableData[index] = input.value;
-        console.log(`✅ Guardado en Política: Index ${index} = ${input.value}`);
+    document.querySelectorAll("#social input[type='number']").forEach((input, index) => {
+        tableData_social[index] = input.value;
+        console.log(`✅ Guardado en social: Index ${index} = ${input.value}`);
     });
 
-    localStorage.setItem("allTableDataPolitica", JSON.stringify(tableData));
-    console.log("📦 Datos guardados en localStorage para Política:", tableData);
+    localStorage.setItem("allTableDatasocial", JSON.stringify(tableData_social));
+    console.log("📦 Datos guardados en localStorage para social:", tableData_social);
 }
 
-// 🔹 Cargar SOLO los valores de Política desde `localStorage`
-function loadAllTableDataPolitica() {
-    let storedData = JSON.parse(localStorage.getItem("allTableDataPolitica")) || [];
-    console.log("📥 Cargando datos de Política desde localStorage:", storedData);
+// 🔹 Cargar SOLO los valores de social desde `localStorage`
+function loadAllTableDataSocial() {
+    let storedData_social = JSON.parse(localStorage.getItem("allTableDatasocial")) || [];
+    console.log("📥 Cargando datos de social desde localStorage:", storedData_social);
 
-    document.querySelectorAll("#politica input[type='number']").forEach((input, index) => {
-        if (storedData[index] !== undefined) {
-            input.value = storedData[index];
-            console.log(`🔄 Restaurado en Política: Index ${index} = ${input.value}`);
+    document.querySelectorAll("#social input[type='number']").forEach((input, index) => {
+        if (storedData_social[index] !== undefined) {
+            input.value = storedData_social[index];
+            console.log(`🔄 Restaurado en social: Index ${index} = ${input.value}`);
         }
     });
 }
+

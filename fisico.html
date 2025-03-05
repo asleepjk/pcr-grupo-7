@@ -1,0 +1,397 @@
+<h2>Variables de Físico</h2>
+<table id="fisico_table">
+    <tr>
+        <th rowspan="2">VARIABLE OPERACIONAL</th>
+        <th rowspan="2">FACTORES</th>
+        <th colspan="3" class="nuestras">NUESTRAS</th>
+        <th colspan="3" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td rowspan="7">FÍSICO</td>
+        <td>RELIEVE</td>
+        <td><input type="number" id="cant-relieve" readonly></td>
+        <td><input type="number" id="coef-relieve" value="1" readonly></td>
+        <td><input type="number" id="total-relieve" readonly></td>
+        <td><input type="number" id="cant-relieve-enemigo" readonly></td>
+        <td><input type="number" id="coef-relieve-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-relieve-enemigo" readonly></td>
+        <td rowspan="7" style="vertical-align: bottom;"><input type="number" id="potcomb-politica-fisico" readonly></td>
+    </tr>
+    <tr>
+        <td>VEGETACIÓN</td>
+        <td><input type="number" id="cant-vegetacion" readonly></td>
+        <td><input type="number" id="coef-vegetacion" value="2" readonly></td>
+        <td><input type="number" id="total-vegetacion" readonly></td>
+        <td><input type="number" id="cant-vegetacion-enemigo" readonly></td>
+        <td><input type="number" id="coef-vegetacion-enemigo" value="2" readonly></td>
+        <td><input type="number" id="total-vegetacion-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>HIDROGRAFÍA</td>
+        <td><input type="number" id="cant-hidrografia" readonly></td>
+        <td><input type="number" id="coef-hidrografia" value="2" readonly></td>
+        <td><input type="number" id="total-hidrografia" readonly></td>
+        <td><input type="number" id="cant-hidrografia-enemigo" readonly></td>
+        <td><input type="number" id="coef-hidrografia-enemigo" value="2" readonly></td>
+        <td><input type="number" id="total-hidrografia-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>OBRAS DE ARTE</td>
+        <td><input type="number" id="cant-arte" readonly></td>
+        <td><input type="number" id="coef-arte" value="1" readonly></td>
+        <td><input type="number" id="total-arte" readonly></td>
+        <td><input type="number" id="cant-arte-enemigo" readonly></td>
+        <td><input type="number" id="coef-arte-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-arte-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>LOCALIDADES</td>
+        <td><input type="number" id="cant-localidades" readonly></td>
+        <td><input type="number" id="coef-localidades" value="1" readonly></td>
+        <td><input type="number" id="total-localidades" readonly></td>
+        <td><input type="number" id="cant-localidades-enemigo" readonly></td>
+        <td><input type="number" id="coef-localidades-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-localidades-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td>NATURALEZA DE SUELO</td>
+        <td><input type="number" id="cant-naturaleza" readonly></td>
+        <td><input type="number" id="coef-naturaleza" value="2" readonly></td>
+        <td><input type="number" id="total-naturaleza" readonly></td>
+        <td><input type="number" id="cant-naturaleza-enemigo" readonly></td>
+        <td><input type="number" id="coef-naturaleza-enemigo" value="2" readonly></td>
+        <td><input type="number" id="total-naturaleza-enemigo" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras-fisico" readonly></td>
+        <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo-fisico" readonly></td>
+    </tr>
+</table>
+
+
+</br>
+<!-- RELIEVE -->
+<table id="relieve" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">RELIEVE</th>
+        <th colspan="3" class="nuestras">NUESTRAS</th>
+        <th colspan="3" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>IMPEDITIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>RESTRICTIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>ADECUADO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- VEGETACION -->
+
+<table id="vegetacion" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">VEGETACIÓN</th>
+        <th colspan="3" class="nuestras">NUESTRAS</th>
+        <th colspan="3" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>IMPEDITIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>RESTRICTIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>ADECUADO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!--HIDROGRAFIA-->
+<table id="hidrografia" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">HIDROGRAFÍA</th>
+        <th colspan="3" class="nuestras">NUESTRAS</th>
+        <th colspan="3" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>IMPEDITIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>RESTRICTIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>ADECUADO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- NATURALEZA DE SUELO -->
+<table id="naturaleza" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">NATURALEZA </br>DE SUELO</th>
+        <th colspan="3" class="nuestras">NUESTRAS</th>
+        <th colspan="3" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>IMPEDITIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>RESTRICTIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>ADECUADO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- LOCALIDADES -->
+
+<table id="localidades" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">LOCALIDADES</th>
+        <th colspan="3" class="nuestras">NUESTRAS</th>
+        <th colspan="3" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>IMPEDITIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>RESTRICTIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>ADECUADO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- OBRAS DE ARTE -->
+
+
+<table id="arte" class="tabla-secundaria">
+    <tr>
+        <th rowspan="2">OBRAS DE ARTE</th>
+        <th colspan="3" class="nuestras">NUESTRAS</th>
+        <th colspan="3" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>IMPEDITIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="4" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>RESTRICTIVO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>ADECUADO</td>
+        <td><input type="number"></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
