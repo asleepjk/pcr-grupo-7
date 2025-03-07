@@ -64,6 +64,7 @@ function calcularTablaSecundariaEconomia(tablaID) {
 
 // Función para actualizar la tabla principal con los valores de las secundarias
 function actualizarTablaPrincipalEconomia() {
+    const categoria = "economia";
     const factores = {
         "produccion-economia": "produccion-economia",
         "distribucion-economia": "distribucion-economia",
@@ -106,6 +107,8 @@ function actualizarTablaPrincipalEconomia() {
         // Acumulamos los totales generales
         totalNuestras += totalNuestrasFactor;
         totalEnemigo += totalEnemigoFactor;
+
+        actualizarGraficos(categoria);
     });
 
     // Insertamos los subtotales en la tabla principal

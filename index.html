@@ -6,6 +6,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
 
     <title>Pestañas Responsivas</title>
     <style>
@@ -80,15 +82,15 @@
 
     .nuestras{
         color: white;
-        background-color: #21a9db;
+        background-color: #0a4ed5;
     }
     .enemigo{
-        color: white;
-        background-color: #413a3a;
+        color: black;
+        background-color: #cebc1a;
     }
     .subtotal{
         color: rgb(0, 0, 0);
-        background-color: #ffe821;
+        background-color: #e8e19f;
     }
     .boton{
         color: white;
@@ -190,6 +192,16 @@
 #logout-btn:hover {
     background: #c0392b;
 }
+
+.sparklines {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.sparklines h4 {
+    margin: 0;
+    text-align: center;
+}
   
     </style>
 </head>
@@ -213,6 +225,7 @@
 
     <div class="tabs">
         <button class="tab-button active" onclick="openTab(event, 'variables')">Cuadro de Variables</button>
+        <button class="tab-button" onclick="openTab(event, 'graficos')">Cuadro Estadístico</button>
         <button class="tab-button" onclick="openTab(event, 'politica')">Política</button>
         <button class="tab-button" onclick="openTab(event, 'militar')">Militar</button>
         <button class="tab-button" onclick="openTab(event, 'economia')">Economía</button>
@@ -617,7 +630,7 @@
     </div>
 </div>
     
-
+    <div id="graficos" class="tab-content"></div>
     <div id="politica" class="tab-content"></div>
     <div id="militar" class="tab-content"></div>
     <div id="economia" class="tab-content"></div>
@@ -721,7 +734,12 @@ function openTab(event, tabId) {
                     if (tabId === "politica") {
                         addTableListeners();
                         loadAllTableDataPolitica();
-                    } else if (tabId === "militar") {
+                    } 
+                    else if (tabId === "graficos") {
+                        loadGraficos();
+                        //loadAllTableDataMilitar();
+                    }
+                    else if (tabId === "militar") {
                         addTableListenersMilitar();
                         loadAllTableDataMilitar();
                     }
@@ -877,6 +895,7 @@ document.getElementById("export-table-pdf").addEventListener("click", function()
     
 
     <script src="script.js"></script>
+    <script src="graficos.js"></script>
     <script src="economia.js"></script>
     <script src="infraestructura.js"></script>
     <script src="fisico.js"></script>

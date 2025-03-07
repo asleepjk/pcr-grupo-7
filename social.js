@@ -64,6 +64,7 @@ function calcularTablaSecundariaSocial(tablaID) {
 
 // Función para actualizar la tabla principal con los valores de las secundarias
 function actualizarTablaPrincipalSocial() {
+    const categoria = "social";
     const factores = {
         "identidad": "identidad",
         "gestion": "gestion",
@@ -118,6 +119,8 @@ function actualizarTablaPrincipalSocial() {
     document.getElementById("potcomb-social").value = potComb.toFixed(2);
     //Agregar a tabla maestra
     document.getElementById("potcomb-social_master").value = potComb.toFixed(2);
+
+    actualizarGraficos(categoria);
 }
 
 

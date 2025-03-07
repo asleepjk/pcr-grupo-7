@@ -64,6 +64,7 @@ function calcularTablaSecundariaFisico(tablaID) {
 
 // Función para actualizar la tabla principal con los valores de las secundarias
 function actualizarTablaPrincipalFisico() {
+    const categoria = "fisico";
     const factores = {
         "relieve": "relieve",
         "vegetacion": "vegetacion",
@@ -122,6 +123,8 @@ function actualizarTablaPrincipalFisico() {
     document.getElementById("potcomb-politica-fisico").value = potComb.toFixed(2);
     // Agregar a la tabla maestra
     document.getElementById("potcomb-politica-fisico_master").value = potComb.toFixed(2);
+
+    actualizarGraficos(categoria);
 }
 
 // GUARDAR DATOS

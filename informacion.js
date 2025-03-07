@@ -64,6 +64,7 @@ function calcularTablaSecundariaInformacion(tablaID) {
 
 // Función para actualizar la tabla principal con los valores de las secundarias
 function actualizarTablaPrincipalInformacion() {
+    const categoria = "informacion";
     const factores = {
         "membresias": "membresias",
         "agencias": "agencias",
@@ -118,6 +119,8 @@ function actualizarTablaPrincipalInformacion() {
     document.getElementById("potcomb-informacion").value = potComb.toFixed(2);
     //Agregar a la tabla maestra
     document.getElementById("potcomb-informacion_master").value = potComb.toFixed(2);
+
+    actualizarGraficos(categoria);
 }
 
 // GUARDAR DATOS

@@ -64,6 +64,7 @@ function calcularTablaSecundaria(tablaID) {
 
 // Función para actualizar la tabla principal con los valores de las secundarias
 function actualizarTablaPrincipal() {
+    const categoria = "politica"; // Cambiar según la pestaña (ej: "economia", "social")
     const factores = {
         "gobierno-central_politica": "gobierno-central",
         "partidos-politicos_politica": "partidos-politicos",
@@ -71,8 +72,7 @@ function actualizarTablaPrincipal() {
         "relaciones-internacionales_politica": "relaciones-internacionales"
     };
 
-    let totalNuestras = 0;
-    let totalEnemigo = 0;
+    let totalNuestras = 0, totalEnemigo = 0;
 
     Object.entries(factores).forEach(([factor, idBase]) => {
         let subtotalNuestrasInput = document.querySelector(`#${factor} tbody tr:last-child input`);
@@ -87,40 +87,28 @@ function actualizarTablaPrincipal() {
         let totalNuestrasFactor = subtotalNuestras * coefNuestras;
         let totalEnemigoFactor = subtotalEnemigo * coefEnemigo;
 
-        // Asignamos los valores correspondientes en la tabla principal
-        document.getElementById(`cant-${idBase}`).value = subtotalNuestras.toFixed(2);
-        document.getElementById(`total-${idBase}`).value = totalNuestrasFactor.toFixed(2);
+        ["", "_master"].forEach(sufijo => {
+            document.getElementById(`cant-${idBase}${sufijo}`).value = subtotalNuestras.toFixed(2);
+            document.getElementById(`total-${idBase}${sufijo}`).value = totalNuestrasFactor.toFixed(2);
+            document.getElementById(`cant-${idBase}-enemigo${sufijo}`).value = subtotalEnemigo.toFixed(2);
+            document.getElementById(`total-${idBase}-enemigo${sufijo}`).value = totalEnemigoFactor.toFixed(2);
+        });
 
-        document.getElementById(`cant-${idBase}-enemigo`).value = subtotalEnemigo.toFixed(2);
-        document.getElementById(`total-${idBase}-enemigo`).value = totalEnemigoFactor.toFixed(2);
-
-        //Agregar a la tabla maestra
-
-        document.getElementById(`cant-${idBase}_master`).value = subtotalNuestras.toFixed(2);
-        document.getElementById(`total-${idBase}_master`).value = totalNuestrasFactor.toFixed(2);
-
-        document.getElementById(`cant-${idBase}-enemigo_master`).value = subtotalEnemigo.toFixed(2);
-        document.getElementById(`total-${idBase}-enemigo_master`).value = totalEnemigoFactor.toFixed(2);
-
-        // Acumulamos los totales generales
         totalNuestras += totalNuestrasFactor;
         totalEnemigo += totalEnemigoFactor;
     });
 
-    // Insertamos los subtotales en la tabla principal
-    document.getElementById("subtotal-nuestras").value = totalNuestras.toFixed(2);
-    document.getElementById("subtotal-enemigo").value = totalEnemigo.toFixed(2);
+    ["", "_master"].forEach(sufijo => {
+        document.getElementById(`subtotal-nuestras${sufijo}`).value = totalNuestras.toFixed(2);
+        document.getElementById(`subtotal-enemigo${sufijo}`).value = totalEnemigo.toFixed(2);
+    });
 
-    //Agregar a la tabla maestra
-
-    document.getElementById("subtotal-nuestras_master").value = totalNuestras.toFixed(2);
-    document.getElementById("subtotal-enemigo_master").value = totalEnemigo.toFixed(2);
-
-    // Calcular POT COMB
     let potComb = totalNuestras !== 0 ? totalEnemigo / totalNuestras : 0;
-    document.getElementById("potcomb-politica").value = potComb.toFixed(2);
-    // Agregar a la tabla maestra
-    document.getElementById("potcomb-politica_master").value = potComb.toFixed(2);
+    ["", "_master"].forEach(sufijo => {
+        document.getElementById(`potcomb-politica${sufijo}`).value = potComb.toFixed(2);
+    });
+
+    actualizarGraficos(categoria); // Ahora llama a la función genérica
 }
 
 // GUARDAR DATOS

@@ -64,6 +64,7 @@ function calcularTablaSecundariaInfraestructura(tablaID) {
 
 // Función para actualizar la tabla principal con los valores de las secundarias
 function actualizarTablaPrincipalInfraestructura() {
+    const categoria = "infraestructura";
     const factores = {
         "hidroelectrica": "hidroelectrica",
         "represas": "represas",
@@ -121,6 +122,8 @@ function actualizarTablaPrincipalInfraestructura() {
     document.getElementById("potcomb-politica-infraestructura").value = potComb.toFixed(2);
     //Agregar a la tabla maestra
     document.getElementById("potcomb-politica-infraestructura_master").value = potComb.toFixed(2);
+
+    actualizarGraficos(categoria);
 }
 
 

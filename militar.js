@@ -125,6 +125,7 @@ function calcularTablaSecundariaMilitarShort(tablaID) {
 
 // Función para actualizar la tabla principal con los valores de las secundarias
 function actualizarTablaPrincipalMilitar() {
+    const categoria = "militar";
     const factores = {
         "ft": "ft",
         "fn": "fn",
@@ -180,6 +181,8 @@ function actualizarTablaPrincipalMilitar() {
     let potComb = totalNuestras !== 0 ? totalEnemigo / totalNuestras : 0;
     document.getElementById("potcomb-militar").value = potComb.toFixed(2);
     document.getElementById("potcomb-militar_master").value = potComb.toFixed(2);
+
+    actualizarGraficos(categoria);
 }
 
 
