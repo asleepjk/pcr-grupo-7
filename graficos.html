@@ -1,189 +1,147 @@
+<div id="graficos">
 <div class="accordion" id="graficosAccordion">
     <!-- Política -->
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="accordion-button toggle-collapse" data-target="collapsePolitica">
-                Gráficos de Política
-            </button>
-        </h2>
-    
-        <div class="sparklines">
-            <div>
-                <h4>NUESTRAS</h4>
-                <div id="sparkNuestras-politica"></div>
-            </div>
-            <div>
-                <h4>ENEMIGO</h4>
-                <div id="sparkEnemigo-politica"></div>
-            </div>
-        </div>
-    
-        <div id="collapsePolitica" class="accordion-collapse collapse show">
-            <div class="accordion-body">
-                <div id="chartPolitica"></div>
-            </div>
-        </div>
-    </div>
-    
-    
-        <!-- Militar -->
+    <div class="accordion-container">
         <div class="accordion-item">
-
-
-
-            <h2 class="accordion-header" id="headingMilitar">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMilitar">
-                    Gráficos de Militar
+            <h2 class="accordion-header">
+                <button class="toggle-collapse" data-target="collapsePolitica">
+                    Política
+                    <span>▼</span>
                 </button>
             </h2>
 
             <div class="sparklines">
-                <div>
-                    <h4>NUESTRAS</h4>
-                    <div id="sparkNuestras-militar"></div>
-                </div>
-                <div>
-                    <h4>ENEMIGO</h4>
-                    <div id="sparkEnemigo-militar"></div>
-                </div>
+                <div><h4>NUESTRAS</h4><div id="sparkNuestras-politica"></div></div>
+                <div><h4>ENEMIGO</h4><div id="sparkEnemigo-politica"></div></div>
             </div>
 
-            <div id="collapseMilitar" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <div id="chartMilitar"></div>
-                </div>
+            <div id="collapsePolitica" class="accordion-collapse show">
+                <div class="accordion-body"><div id="chartPolitica"></div></div>
             </div>
         </div>
-    </div>
+
+  
+        <!-- Militar -->
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="toggle-collapse" data-target="collapseMilitar">
+                        Militar
+                        <span>▼</span>
+                    </button>
+                </h2>
+    
+                <div class="sparklines">
+                    <div><h4>NUESTRAS</h4><div id="sparkNuestras-militar"></div></div>
+                    <div><h4>ENEMIGO</h4><div id="sparkEnemigo-militar"></div></div>
+                </div>
+    
+                <div id="collapseMilitar" class="accordion-collapse show">
+                    <div class="accordion-body"><div id="chartMilitar"></div></div>
+                </div>
+            </div>
 
     <!-- Economía -->
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingEconomia">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEconomia">
-                Gráficos de Economía
-            </button>
-        </h2>
-
-        <div class="sparklines">
-            <div>
-                <h4>NUESTRAS</h4>
-                <div id="sparkNuestras-economia"></div>
-            </div>
-            <div>
-                <h4>ENEMIGO</h4>
-                <div id="sparkEnemigo-economia"></div>
-            </div>
-        </div>
-
-        <div id="collapseEconomia" class="accordion-collapse collapse">
-            <div class="accordion-body">
-                <div id="chartEconomia"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Social -->
-    <!-- Agrega más categorías con la misma estructura -->
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="accordion-button toggle-collapse" data-target="collapseSocial">
-                Gráficos de Social
-            </button>
-        </h2>
-    
-        <div class="sparklines">
-            <div>
-                <h4>NUESTRAS</h4>
-                <div id="sparkNuestras-social"></div>
-            </div>
-            <div>
-                <h4>ENEMIGO</h4>
-                <div id="sparkEnemigo-social"></div>
-            </div>
-        </div>
-    
-        <div id="collapseSocial" class="accordion-collapse collapse show">
-            <div class="accordion-body">
-                <div id="chartSocial"></div>
-            </div>
-        </div>
-    </div>
-
-        <!-- Infraestructura -->
+    <div class="accordion-container">
         <div class="accordion-item">
-            <h2 class="accordion-header" id="headingInfraestructura">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfraestructura">
-                    Gráficos de Infraestructura
+            <h2 class="accordion-header">
+                <button class="toggle-collapse" data-target="collapseEconomia">
+                    Economía
+                    <span>▼</span>
                 </button>
             </h2>
 
             <div class="sparklines">
-                <div>
-                    <h4>NUESTRAS</h4>
-                    <div id="sparkNuestras-infraestructura"></div>
-                </div>
-                <div>
-                    <h4>ENEMIGO</h4>
-                    <div id="sparkEnemigo-infraestructura"></div>
-                </div>
+                <div><h4>NUESTRAS</h4><div id="sparkNuestras-economia"></div></div>
+                <div><h4>ENEMIGO</h4><div id="sparkEnemigo-economia"></div></div>
             </div>
 
-            <div id="collapseInfraestructura" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <div id="chartInfraestructura"></div>
-                </div>
+            <div id="collapseEconomia" class="accordion-collapse show">
+                <div class="accordion-body"><div id="chartEconomia"></div></div>
             </div>
         </div>
 
-                <!-- Informacion -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingInformacion">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInformacion">
-                            Gráficos de Información
-                        </button>
-                    </h2>
+    <!-- Economia -->
+    <!-- Social -->
+    <div class="accordion-container">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="toggle-collapse" data-target="collapseSocial">
+                    Social
+                    <span>▼</span>
+                </button>
+            </h2>
 
-                    <div class="sparklines">
-                        <div>
-                            <h4>NUESTRAS</h4>
-                            <div id="sparkNuestras-informacion"></div>
-                        </div>
-                        <div>
-                            <h4>ENEMIGO</h4>
-                            <div id="sparkEnemigo-informacion"></div>
-                        </div>
-                    </div>
+            <div class="sparklines">
+                <div><h4>NUESTRAS</h4><div id="sparkNuestras-social"></div></div>
+                <div><h4>ENEMIGO</h4><div id="sparkEnemigo-social"></div></div>
+            </div>
 
-                    <div id="collapseInformacion" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <div id="chartInformacion"></div>
-                        </div>
-                    </div>
+            <div id="collapseSocial" class="accordion-collapse show">
+                <div class="accordion-body"><div id="chartSocial"></div></div>
+            </div>
+        </div>
+
+        <!-- Infraestructura -->
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="toggle-collapse" data-target="collapseInfraestructura">
+                        Infraestructura
+                        <span>▼</span>
+                    </button>
+                </h2>
+    
+                <div class="sparklines">
+                    <div><h4>NUESTRAS</h4><div id="sparkNuestras-infraestructura"></div></div>
+                    <div><h4>ENEMIGO</h4><div id="sparkEnemigo-infraestructura"></div></div>
                 </div>
+    
+                <div id="collapseInfraestructura" class="accordion-collapse show">
+                    <div class="accordion-body"><div id="chartInfraestructura"></div></div>
+                </div>
+            </div>
 
-                                <!-- Fisico -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFisico">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFisico">
-                                            Gráficos de Fisico
-                                        </button>
-                                    </h2>
+                <!-- Informacion -->
+                <div class="accordion-container">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="toggle-collapse" data-target="collapseInformacion">
+                                Información
+                                <span>▼</span>
+                            </button>
+                        </h2>
+            
+                        <div class="sparklines">
+                            <div><h4>NUESTRAS</h4><div id="sparkNuestras-informacion"></div></div>
+                            <div><h4>ENEMIGO</h4><div id="sparkEnemigo-informacion"></div></div>
+                        </div>
+            
+                        <div id="collapseInformacion" class="accordion-collapse show">
+                            <div class="accordion-body"><div id="chartInformacion"></div></div>
+                        </div>
+                    </div>
 
-                                    <div class="sparklines">
-                                        <div>
-                                            <h4>NUESTRAS</h4>
-                                            <div id="sparkNuestras-fisico"></div>
-                                        </div>
-                                        <div>
-                                            <h4>ENEMIGO</h4>
-                                            <div id="sparkEnemigo-fisico"></div>
-                                        </div>
-                                    </div>
-
-                                    <div id="collapseFisico" class="accordion-collapse collapse">
-                                        <div class="accordion-body">
-                                            <div id="chartFisico"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <!-- Fisico -->
+                    <div class="accordion-container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="toggle-collapse" data-target="collapseFisico">
+                                    Físico
+                                    <span>▼</span>
+                                </button>
+                            </h2>
+                
+                            <div class="sparklines">
+                                <div><h4>NUESTRAS</h4><div id="sparkNuestras-fisico"></div></div>
+                                <div><h4>ENEMIGO</h4><div id="sparkEnemigo-fisico"></div></div>
+                            </div>
+                
+                            <div id="collapseFisico" class="accordion-collapse show">
+                                <div class="accordion-body"><div id="chartFisico"></div></div>
+                            </div>
+                        </div>
+                                
 </div>
+</div>
+

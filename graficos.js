@@ -69,6 +69,27 @@ function loadGraficos() {
         // Cargar datos iniciales
         actualizarGraficos(categoria);
     });
+
+    // Añadir esto al final de la función loadGraficos
+    const toggleButtons = document.querySelectorAll('.toggle-collapse');
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            console.log('Botón clickeado');
+            
+            const targetId = this.getAttribute('data-target');
+            const collapseElement = document.getElementById(targetId);
+            
+            if (collapseElement) {
+                if (collapseElement.style.display === 'none' || getComputedStyle(collapseElement).display === 'none') {
+                    collapseElement.style.display = 'block';
+                    this.querySelector('span').textContent = '▼';
+                } else {
+                    collapseElement.style.display = 'none';
+                    this.querySelector('span').textContent = '▲';
+                }
+            }
+        });
+    });
 }
 
 function obtenerDatosDesdeTabla(categoria) {

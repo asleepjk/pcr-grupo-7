@@ -17,6 +17,18 @@
             padding: 0;
             text-align: center;
         }
+
+        .icon{
+            width: 400px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        h2{
+            color: white;
+            text-shadow: rgb(0, 0, 0) 1px 0 10px;
+        }
+
         .tabs {
             display: flex;
             flex-wrap: wrap;
@@ -54,8 +66,8 @@
     td {
         min-width: 80px;     /* Ancho mínimo para celdas */
         max-width: 120px;    /* Ancho máximo para celdas */
-        padding: 6px !important; /* Reducción de espacio en celdas */
-        border: 1px solid black;
+        padding: 8px !important; /* Reducción de espacio en celdas */
+        border: 3px solid black;
     }
 
     th {
@@ -71,6 +83,7 @@
         border-collapse: collapse;
         margin-left: auto;
         margin-right: auto;
+        background: #ffffffab;
     }
 
     /* Ajuste específico para celdas con texto largo */
@@ -121,6 +134,8 @@
     align-items: center;
     height: 100vh;
     width: 100%;
+    background: url(./assets/esge-bg.jpg);
+    background-size: cover;
 }
 
 /* 🔹 Caja de Login */
@@ -176,17 +191,15 @@
 
 /* 🔹 Botón de Cerrar Sesión */
 #logout-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 8px 12px;
     background: #e74c3c;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 14px;
+    padding: 12px;
+    margin: 5px 0;
     cursor: pointer;
-    transition: 0.3s;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
 }
 
 #logout-btn:hover {
@@ -202,6 +215,234 @@
     margin: 0;
     text-align: center;
 }
+
+#variables{
+    background-image: url('./assets/variables.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* 🔹 Estilos del Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('./assets/bg_main.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+}
+
+/* 🔹 Contenedor del Logo y Texto */
+.overlay-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* 🔹 Logo */
+.overlay-content img {
+    width: 550px;
+    margin-bottom: 15px;
+}
+
+/* 🔹 Subtítulo */
+.overlay-content h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#politica{
+    background-image: url('./assets/politica.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#militar{
+    background-image: url('./assets/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#economia{
+    background-image: url('./assets/economia.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#social{
+    background-image: url('./assets/social.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#infraestructura{
+    background-image: url('./assets/infraestructura.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#informacion{
+    background-image: url('./assets/informacion.jpg');
+    background-size: cover;    
+    background-attachment: fixed;
+}
+
+#fisico{
+    background-image: url('./assets/fisico.jpg');
+    background-size: cover;    
+    background-attachment: fixed;
+}
+
+#graficos{
+    background-image: url('./assets/estadistica.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+        .accordion-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            background-color: #f2f2f2e9;
+        }
+
+        .accordion-header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .accordion-header button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .accordion-collapse {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+            padding: 0 10px;
+        }
+
+        .accordion-collapse.show {
+            max-height: 500px; /* Ajusta según el contenido */
+            padding: 10px;
+        }
+
+        .sparklines {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .sparklines div {
+            text-align: center;
+        }
+
+        .accordion-collapse {
+            display: none;
+        }
+
+        .accordion-collapse.show {
+            display: block;
+        }
+
+        .menu-container {
+            position: fixed;
+            top: 0;
+            left: -100%; /* Oculto por defecto */
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            transition: left 0.3s ease-in-out;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Contenido del menú */
+        .menu-vertical {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        /* Botón de cada opción */
+        .menu-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin: 5px 0;
+            cursor: pointer;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .menu-button:hover, .menu-button.active {
+            background: #0056b3;
+        }
+
+        /* Botón para abrir el menú */
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1100;
+        }
+
+        /* Cerrar menú */
+        .close-menu {
+            background: red;
+            margin-bottom: 10px;
+        }
+
+        /* Secciones de contenido */
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        #app-content{
+            background-color: rgba(0, 0, 0, 0.653);
+        }
+    </style>
   
     </style>
 </head>
@@ -218,28 +459,42 @@
     </div>
 </div>
 
+<div id="overlay">
+    <div class="overlay-content">
+        <img src="./assets/esge.png" alt="Logo ESGE">
+        <h2>CORRELACIÓN DEL PODER NACIONAL AZUL Y AMARILLO</h2>
+    </div>
+</div>
+
 
 <!-- TODO EL CONTENIDO DE TABLAS -->
 <div id="app-content" style="display: none;">
     <button id="logout-btn" style="position: absolute; top: 10px; right: 10px;">Cerrar Sesión</button>
 
-    <div class="tabs">
-        <button class="tab-button active" onclick="openTab(event, 'variables')">Cuadro de Variables</button>
-        <button class="tab-button" onclick="openTab(event, 'graficos')">Cuadro Estadístico</button>
-        <button class="tab-button" onclick="openTab(event, 'politica')">Política</button>
-        <button class="tab-button" onclick="openTab(event, 'militar')">Militar</button>
-        <button class="tab-button" onclick="openTab(event, 'economia')">Economía</button>
-        <button class="tab-button" onclick="openTab(event, 'social')">Social</button>
-        <button class="tab-button" onclick="openTab(event, 'infraestructura')">Infraestructura</button>
-        <button class="tab-button" onclick="openTab(event, 'informacion')">Información</button>
-        <button class="tab-button" onclick="openTab(event, 'fisico')">Físico</button>
-    </div>
-
     <button class="boton" id="export-table-pdf">Exportar a PDF</button>
     <button class="save" id="save-all-data">Guardar</button>
     <button class="reset" onclick="localStorage.clear(); location.reload();">Reiniciar Datos</button>
 
+    <button class="menu-toggle" onclick="toggleMenu()">Menú</button>
+
+    <div class="menu-container" id="menu">
+        <div class="menu-vertical">
+            <button class="menu-button close-menu" onclick="toggleMenu()">Cerrar</button>
+            <button class="menu-button" onclick="openTab(event, 'politica')">POLÍTICO</button>
+            <button class="menu-button" onclick="openTab(event, 'economia')">ECONÓMICO</button>
+            <button class="menu-button" onclick="openTab(event, 'militar')">MILITAR</button>
+            <button class="menu-button" onclick="openTab(event, 'social')">SOCIAL</button>
+            <button class="menu-button" onclick="openTab(event, 'informacion')">INFORMACIÓN</button>
+            <button class="menu-button" onclick="openTab(event, 'infraestructura')">INFRAESTRUCTURA</button>
+            <button class="menu-button" onclick="openTab(event, 'fisico')">ENTORNO FÍSICO</button>
+            <button class="menu-button" onclick="openTab(event, 'graficos')">ESTADÍSTICAS</button>
+            <button class="menu-button active" onclick="openTab(event, 'variables')">RESUMEN</button>
+        </div>
+    </div>
+
+
     <div id="variables" class="tab-content active">
+
         
         <h2>Cuadro de Variables</h2>
         <table>
@@ -707,6 +962,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function openTab(event, tabId) {
     var i, tabcontent, tabbuttons;
 
+
     // Desactivar todas las pestañas y botones
     tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
@@ -782,10 +1038,18 @@ document.getElementById("export-table-pdf").addEventListener("click", function()
         return;
     }
 
+    // 🔹 Guardamos el background original y lo eliminamos temporalmente
+    const originalBackground = activeTab.style.background;
+    activeTab.style.background = "none";
+
     html2canvas(activeTab, {
         scale: 2, // Aumenta la calidad de la imagen
-        useCORS: true
+        useCORS: true,
+        backgroundColor: null // 🔹 Evita que se agregue un fondo blanco
     }).then(canvas => {
+        // Restauramos el background original
+        activeTab.style.background = originalBackground;
+
         let imgData = canvas.toDataURL("image/png");
         let imgWidth = 210; // Ancho A4 en mm
         let pageHeight = 297; // Alto A4 en mm
@@ -806,6 +1070,7 @@ document.getElementById("export-table-pdf").addEventListener("click", function()
         doc.save("tablas.pdf");
     });
 });
+
 
     </script>
     
@@ -948,6 +1213,38 @@ document.addEventListener("DOMContentLoaded", function () {
         appContent.style.display = "block";
     }
 });
+    </script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+            document.getElementById("overlay").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("overlay").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            }, 500); // Pequeño retraso para suavizar el desvanecimiento
+        }, 3000); // Ocultar después de 3 segundos
+    });
+</script>
+
+<script>
+            function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.style.left = (menu.style.left === "0px") ? "-100%" : "0px";
+        }
+        toggleMenu();
+</script>
+
+<script>
+function toggleVisibility(...elementIds) {
+    elementIds.forEach(elementId => {
+        var element = document.getElementById(elementId);
+        if (element) {
+            element.style.display = (element.style.display === "none") ? "table" : "none";
+        }
+    });
+}
     </script>
     
 </body>

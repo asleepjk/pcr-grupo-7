@@ -1,5 +1,6 @@
-<h2>Variables Económicas</h2>
-<table id="economia_table">
+<h2>Economía</h2>
+<img class="icon" src="./assets/icons/economia/economia.png" onclick="toggleVisibility('economia_table')"/>
+<table id="economia_table" style="display: none;">
     <tr>
         <th rowspan="2">VARIABLE OPERACIONAL</th>
         <th rowspan="2">FACTORES</th>
@@ -81,7 +82,8 @@
 
 </br>
 <!-- PRODUCCION -->
-<table id="produccion-economia" class="tabla-secundaria">
+<img class="icon" src="./assets/icons/economia/pbi.png" onclick="toggleVisibility('produccion-economia' , 'distribucion-economia', 'consumo-economia', 'informal-economia')"/>
+<table id="produccion-economia" class="tabla-secundaria" style="display: none;">
     <tr>
         <th rowspan="2">PRODUCCIÓN</th>
         <th colspan="5" class="nuestras">NUESTRAS</th>
@@ -150,7 +152,7 @@
 
 <!-- DISTRIBUCION -->
 
-<table id="distribucion-economia" class="tabla-secundaria">
+<table id="distribucion-economia" class="tabla-secundaria"  style="display: none;">
     <tr>
         <th rowspan="2">DISTRIBUCIÓN</th>
         <th colspan="5" class="nuestras">NUESTRAS</th>
@@ -205,7 +207,7 @@
 </br>
 
 <!--CONSUMO-->
-<table id="consumo-economia" class="tabla-secundaria">
+<table id="consumo-economia" class="tabla-secundaria"  style="display: none;">
     <tr>
         <th rowspan="2">CONSUMO</th>
         <th colspan="5" class="nuestras">NUESTRAS</th>
@@ -260,7 +262,7 @@
 </br>
 
 <!-- INFORMAL -->
-<table id="informal-economia" class="tabla-secundaria">
+<table id="informal-economia" class="tabla-secundaria"  style="display: none;">
     <tr>
         <th rowspan="2">ECONOMÍA INFORMAL</th>
         <th colspan="5" class="nuestras">NUESTRAS</th>
@@ -341,8 +343,8 @@
 </br>
 
 <!-- RESERVA INTERNACIONAL -->
-
-<table id="reserva-economia" class="tabla-secundaria">
+<img class="icon" src="./assets/icons/economia/reserva.png" onclick="toggleVisibility('reserva-economia')"/>
+<table id="reserva-economia" class="tabla-secundaria"  style="display: none;">
     <tr>
         <th rowspan="2">RESERVA INTERNACIONAL</th>
         <th colspan="5" class="nuestras">NUESTRAS</th>
@@ -384,8 +386,8 @@
 </br>
 
 <!-- DEFENSA -->
-
-<table id="defensa-economia" class="tabla-secundaria">
+<img class="icon" src="./assets/icons/economia/defensa.png" onclick="toggleVisibility('defensa-economia')"/>
+<table id="defensa-economia" class="tabla-secundaria"  style="display: none;">
     <tr>
         <th rowspan="2">GASTO EN DEFENSA</th>
         <th colspan="5" class="nuestras">NUESTRAS</th>

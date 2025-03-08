@@ -1,5 +1,6 @@
 <h2>Variables Militar</h2>
-<table id="militar_table">
+<img class="icon" src="./assets/icons/militar/militar.png" onclick="toggleVisibility('militar_table')"/>
+<table id="militar_table" style="display: none;">
     <tr>
         <th rowspan="2">VARIABLE OPERACIONAL</th>
         <th rowspan="2">FACTORES</th>
@@ -72,7 +73,8 @@
 
 </br>
 <!-- FT -->
-<table id="ft" class="tabla-secundaria">
+<img class="icon" src="./assets/icons/militar/ft.png" onclick="toggleVisibility('ft')"/>
+<table id="ft" class="tabla-secundaria" style="display: none;">
     <tr>
         <th rowspan="2">FT</th>
         <th colspan="5" class="nuestras">NUESTRAS</th>
@@ -179,8 +181,8 @@
 </br>
 
 <!-- FN -->
-
-<table id="fn" class="tabla-secundaria-short">
+<img class="icon" src="./assets/icons/militar/fn.png" onclick="toggleVisibility('fn')"/>
+<table id="fn" class="tabla-secundaria-short" style="display: none;">
     <tr>
         <th rowspan="2">FUERZA NAVAL</th>
         <th colspan="3" class="nuestras">NUESTRAS</th>
@@ -277,7 +279,8 @@
 </br>
 
 <!--FA-->
-<table id="fa" class="tabla-secundaria">
+<img class="icon" src="./assets/icons/militar/fa.png" onclick="toggleVisibility('fa')"/>
+<table id="fa" class="tabla-secundaria" style="display: none;">
     <tr>
         <th rowspan="2">FUERZA AÉREA</th>
         <th colspan="5" class="nuestras">NUESTRAS</th>
@@ -286,46 +289,60 @@
     </tr>
     <tr>
         <th>CANT</th>
-        <th>ENCUESTA %</th>
-        <th>CANT. REAL</th>
+        <th>CANT RELATIVA</th>
+        <th>EFECT IND</th>
         <th>COEF</th>
         <th>TOTAL</th>
         <th>CANT</th>
-        <th>ENCUESTA %</th>
-        <th>CANT. REAL</th>
+        <th>CANT RELATIVA</th>
+        <th>EFECT IND</th>
         <th>COEF</th>
         <th>TOTAL</th>
     </tr>
     <tr>
-        <td> </td>
+        <td>MIRAGE 2000</td>
         <td><input type="number"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" value="1.5" readonly></td>
         <td><input type="number" readonly></td>
         <td><input type="number" ></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" value="1.5" readonly></td>
         <td><input type="number" readonly></td>
-        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+        <td rowspan="23" style="vertical-align: bottom;"><input type="number"></td>
     </tr>
     <tr>
-        <td> </td>
+        <td> MIG 29</td>
         <td><input type="number"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
         <td><input type="number" readonly></td>
         <td><input type="number" ></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
         <td><input type="number" readonly></td>
     </tr>
     
     <tr>
-        <td> </td>
+        <td> SUKHOI 25</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>IAI kflr C-10/C-12 COA</td>
         <td><input type="number"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
@@ -334,20 +351,272 @@
         <td><input type="number" ></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>Embraer A-298 Super Tucano</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>Embraer EMB 312 Tucano [AT-27M]</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>Baster BT-67 Fantasma</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>BLACK HAWK</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>MI 35 P</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>MI 17 - SH</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>MI 17</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>MI-25</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>BELL 212</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>BLACK HAWK SIKORSKY</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>BELL UH - 1H HUEY</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>S-70 I SIKOROSKY</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>PERFORMANCE BOEING 737</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>BOEING HERCULES C 130</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>ANTONOV 32B</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>LEONARDO C-27</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>BOEING 767</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td>EMBRAER EMB BRECHERATI</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1.2" readonly></td>
         <td><input type="number" readonly></td>
     </tr>
     <tr>
         <td class="subtotal"><strong>Subtotal</strong></td>
-        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
-        <td class="subtotal" colspan="3"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
     </tr>
 </table>
 </br>
 
 <!-- LIDERAZGO -->
-
-<table id="liderazgo" class="tabla-secundaria-short">
+<img class="icon" src="./assets/icons/militar/liderazgo.png" onclick="toggleVisibility('liderazgo')"/>
+<table id="liderazgo" class="tabla-secundaria-short" style="display:none;" >
     <tr>
         <th rowspan="2">LIDERAZGO</th>
         <th colspan="3" class="nuestras">NUESTRAS</th>
@@ -381,8 +650,8 @@
 </br>
 
 <!-- EXPERIENCIA -->
-
-<table id="experiencia" class="tabla-secundaria-short">
+<img class="icon" src="./assets/icons/militar/experiencia.png" onclick="toggleVisibility('experiencia')"/>
+<table id="experiencia" class="tabla-secundaria-short" style="display: none;">
     <tr>
         <th rowspan="2">EXPERIENCIA EN COMBATE</th>
         <th colspan="3" class="nuestras">NUESTRAS</th>
