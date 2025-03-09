@@ -69,9 +69,3780 @@
         <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-enemigo-militar" readonly></td>
     </tr>
 </table>
+</br>
 
+<!------------------------------ PERU --------------------------------------->
+
+<img class="icon" src="./assets/icons/militar/peru.png" onclick="toggleVisibility('peru-ddee','peru_table')"/>
+<div id="peru-ddee" style="display: none; width: 100%;">
+<table id="peru_table" style="display: none;">
+    <tr>
+        <th rowspan="1">VARIABLE OPERACIONAL</th>
+        <th rowspan="1">FACTORES</th>
+        <th rowspan="1">POT COMB</th>
+    </tr>
+    <tr>
+        <td rowspan="7">PERÚ</td>
+        <td>MANIOBRA</td>
+        <td><input type="number" id="cant-peru-maniobra" readonly></td>
+    </tr>
+    <tr>
+        <td>FGOS</td>
+        <td><input type="number" id="cant-peru-fgos" readonly></td>
+    </tr>
+    <tr>
+        <td>PROTECCIÓN</td>
+        <td><input type="number" id="cant-peru-proteccion" readonly></td>
+    </tr>
+    <tr>
+        <td>SOSTENIMIENTO</td>
+        <td><input type="number" id="cant-peru-sost" readonly></td>
+    </tr>
+    <tr>
+        <td>C2</td>
+        <td><input type="number" id="cant-peru-c2" readonly></td>
+    </tr>
+    <tr>
+        <td>INTG</td>
+        <td><input type="number" id="cant-peru-intg" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- ------------ IDE -------------->
+
+<img class="icon" src="./assets/icons/militar/IDE.png" onclick="toggleVisibility('ide-maniobra', 'ide-fgos', 'ide-proteccion', 'ide-sost', 'ide-c2')"/>
+<table id="ide-maniobra" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BIM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>ECB</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="15" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="15" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BIB</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="60" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="60" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTQ</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="100" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="100" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>RCB</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="80" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="80" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BIS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- IDE FGOS-->
+<table id="ide-fgos" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>GAC</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>GAB</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="60" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="60" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IDE FGOS-->
+
+<!-- IDE PROTECCION-->
+<table id="ide-proteccion" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>GAA</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IDE PROTECCION -->
+
+<!-- IDE SOSTENIMIENTO-->
+<table id="ide-sost" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BTN TRANS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN INT</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN MG</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IDE SOSTENIMIENTO -->
+
+<!-- IDE C2-->
+<table id="ide-c2" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CIA COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>CIA CMDO</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IDE C2 -->
+<!-- -------------IDE -------------->
+
+<!-- ------------ IIDE -------------->
+
+<img class="icon" src="./assets/icons/militar/iide.png" onclick="toggleVisibility('iide-maniobra', 'iide-fgos', 'iide-proteccion', 'iide-sost', 'iide-c2')"/>
+<table id="iide-maniobra" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN FFEE</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="80" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="80" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BTN CMDOS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="50" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="50" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BIM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- IIDE FGOS-->
+<table id="iide-fgos" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>GAC</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIDE FGOS-->
+
+<!-- IIIDE SOSTENIMIENTO-->
+<table id="iide-sost" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIDE SOSTENIMIENTO -->
+
+<!-- IIDE C2-->
+<table id="iide-c2" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CIA CMDO</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>CIA COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIDE C2 -->
+
+<!-- -------------IIDE -------------->
+
+<!-- ------------ IIIDE -------------->
+
+<img class="icon" src="./assets/icons/militar/iiide.png" onclick="toggleVisibility('iiide-maniobra', 'iiide-fgos', 'iiide-proteccion', 'iiide-sost', 'iiide-c2')"/>
+<table id="iiide-maniobra" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BIM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2.5" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="2.5" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>ECB</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BIB</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTQ</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>RCB</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- IIIDE FGOS-->
+<table id="iiide-fgos" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>GAC</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIIDE FGOS-->
+
+<!-- IIIDE PROTECCION-->
+<table id="iiide-proteccion" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>GAAA</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>GAAA</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>CIA AT</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIIDE PROTECCION -->
+
+<!-- IIIDE SOSTENIMIENTO-->
+<table id="iiide-sost" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BTN TRANS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN INT</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN MG</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BATERÍA SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>CIA CMDO Y SERV (AT)</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIIDE SOSTENIMIENTO -->
+
+<!-- IIIDE C2-->
+<table id="iiide-c2" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CIA CMDO</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>CIA COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIIDE C2 -->
+
+<!-- -------------IIIDE -------------->
+
+<!-- ------------ IVDE -------------->
+
+<img class="icon" src="./assets/icons/militar/ivde.png" onclick="toggleVisibility('ivde-maniobra', 'ivde-fgos', 'ivde-proteccion', 'ivde-sost', 'ivde-c2')"/>
+<table id="ivde-maniobra" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BIM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>ESC FFEE</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="15" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="15" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BCT</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="50" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="50" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BFFEE</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="80" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="80" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BCMDOS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="50" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="50" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- IVDE FGOS-->
+<table id="ivde-fgos" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BAT CAMP</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IVDE FGOS-->
+
+<!-- IVDE PROTECCION-->
+<table id="ivde-proteccion" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IVDE PROTECCION -->
+
+<!-- IVDE SOSTENIMIENTO-->
+<table id="ivde-sost" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IVDE SOSTENIMIENTO -->
+
+<!-- IVDE C2-->
+<table id="ivde-c2" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CIA CMDO</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>CIA COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IVE C2 -->
+
+
+
+<!-- -------------IVDE -------------->
+
+<!-- ------------ VDE -------------->
+
+<img class="icon" src="./assets/icons/militar/vde.png" onclick="toggleVisibility('vde-maniobra', 'vde-proteccion', 'vde-sost', 'vde-c2')"/>
+<table id="vde-maniobra" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BS/td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- VDE PROTECCION-->
+<table id="vde-proteccion" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VDE PROTECCION -->
+
+<!-- VDE SOSTENIMIENTO-->
+<table id="vde-sost" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BTN TRANS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN INT</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN MG</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VDE SOSTENIMIENTO -->
+
+<!-- VDE C2-->
+<table id="vde-c2" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>CIA COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VE C2 -->
+<!-- -------------VDE -------------->
+
+<!-- INTG -->
+<img class="icon" src="./assets/icons/militar/intg.png" onclick="toggleVisibility('intg-peru')"/>
+<table id="intg-peru" class="tabla-secundaria-mil" style="display: none;">
+    <tr>
+        <th rowspan="2">INTG</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CIA INTG</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+</div>
+<!-- INTG -->
 
 </br>
+<!-- --------------------------COLOMBIA -------------------------------->
+
+<img class="icon" src="./assets/icons/militar/colombia.png" onclick="toggleVisibility('col-ddee','col_table')"/>
+<div id="col-ddee" style="display: none; width: 100%;">
+<table id="col_table" style="display: none;">
+    <tr>
+        <th rowspan="1">VARIABLE OPERACIONAL</th>
+        <th rowspan="1">FACTORES</th>
+        <th rowspan="1">POT COMB</th>
+    </tr>
+    <tr>
+        <td rowspan="7">COLOMBIA</td>
+        <td>MANIOBRA</td>
+        <td><input type="number" id="cant-col-maniobra" readonly></td>
+    </tr>
+    <tr>
+        <td>FGOS</td>
+        <td><input type="number" id="cant-col-fgos" readonly></td>
+    </tr>
+    <tr>
+        <td>PROTECCIÓN</td>
+        <td><input type="number" id="cant-col-proteccion" readonly></td>
+    </tr>
+    <tr>
+        <td>SOSTENIMIENTO</td>
+        <td><input type="number" id="cant-col-sost" readonly></td>
+    </tr>
+    <tr>
+        <td>C2</td>
+        <td><input type="number" id="cant-col-c2" readonly></td>
+    </tr>
+    <tr>
+        <td>INTG</td>
+        <td><input type="number" id="cant-col-intg" readonly></td>
+    </tr>
+</table>
+
+</br>
+
+<!----------- IDE ------------>
+ <!-- IDE MANIOBRAS-->
+<img class="icon" src="./assets/icons/militar/ide-col.png" onclick="toggleVisibility('ide-maniobra-col', 'ide-fgos-col', 'ide-proteccion-col', 'ide-sost-col', 'ide-c2-col')"/>
+<table id="ide-maniobra-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BIMEC</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BTN AM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="35" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>GPO CB</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>GPO CAB MEC</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN EEV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IDE MANIOBRAS-->
+ <!-- IDE FGOS-->
+<table id="ide-fgos-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN ART</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IDE FGOS-->
+
+<!-- IDE PROTECCION-->
+<table id="ide-proteccion-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IDE PROTECCION -->
+
+<!-- IDE SOSTENIMIENTO-->
+<table id="ide-sost-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IDE SOSTENIMIENTO -->
+
+<!-- IDE C2-->
+<table id="ide-c2-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IDE C2 -->
+<!---------- IDE ---------->
+
+<!-------- II DE --------->
+<img class="icon" src="./assets/icons/militar/iide-col.png" onclick="toggleVisibility('iide-maniobra-col', 'iide-fgos-col', 'iide-proteccion-col', 'iide-sost-col', 'iide-c2-col')"/>
+<table id="iide-maniobra-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BIM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>GPO CAB</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN EEV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BIS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN AM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- IIDE FGOS-->
+<table id="iide-fgos-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN ART</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIDE FGOS-->
+
+<!-- IIDE PROTECCION-->
+<table id="iide-proteccion-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIDE PROTECCION -->
+
+<!-- IIDE SOSTENIMIENTO-->
+<table id="iide-sost-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIDE SOSTENIMIENTO -->
+
+<!-- IIDE C2-->
+<table id="iide-c2-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIDE C2 -->
+
+<!-- -------------IIDE -------------->
+
+<!-------- III DE --------->
+<img class="icon" src="./assets/icons/militar/iiide-col.png" onclick="toggleVisibility('iiide-maniobra-col', 'iiide-fgos-col', 'iiide-proteccion-col', 'iiide-sost-col', 'iiide-c2-col')"/>
+<table id="iiide-maniobra-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BIM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BTN AM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN EEV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>GPO CAB MEC</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- IIIDE FGOS-->
+<table id="iiide-fgos-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN ART</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIIDE FGOS-->
+
+<!-- IIIDE PROTECCION-->
+<table id="iiide-proteccion-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIIDE PROTECCION -->
+
+<!-- IIIDE SOSTENIMIENTO-->
+<table id="iiide-sost-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIIDE SOSTENIMIENTO -->
+
+<!-- IIIDE C2-->
+<table id="iiide-c2-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IIIDE C2 -->
+
+<!-- -------------IIIDE -------------->
+
+
+<!-------- IV DE --------->
+<img class="icon" src="./assets/icons/militar/ivde-col.png" onclick="toggleVisibility('ivde-maniobra-col', 'ivde-fgos-col', 'ivde-proteccion-col', 'ivde-sost-col', 'ivde-c2-col')"/>
+<table id="ivde-maniobra-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BIM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BTN AM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN EEV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>GPO CAB MEC</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- IVDE FGOS-->
+<table id="ivde-fgos-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN ART</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IVDE FGOS-->
+
+<!-- IVDE PROTECCION-->
+<table id="ivde-proteccion-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IVDE PROTECCION -->
+
+<!-- IVDE SOSTENIMIENTO-->
+<table id="ivde-sost-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IVDE SOSTENIMIENTO -->
+
+<!-- IVDE C2-->
+<table id="ivde-c2-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- IVDE C2 -->
+
+<!-- -------------IVDE -------------->
+
+<!-------- V DE --------->
+<img class="icon" src="./assets/icons/militar/vde-col.png" onclick="toggleVisibility('vde-maniobra-col', 'vde-fgos-col', 'vde-proteccion-col', 'vde-sost-col', 'vde-c2-col')"/>
+<table id="vde-maniobra-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BIM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BTN OPNS TERRETRES</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>GPO CAB</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN EEV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- VDE FGOS-->
+<table id="vde-fgos-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN ART</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VDE FGOS-->
+
+<!-- VDE PROTECCION-->
+<table id="vde-proteccion-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VDE PROTECCION -->
+
+<!-- VDE SOSTENIMIENTO-->
+<table id="vde-sost-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VDE SOSTENIMIENTO -->
+
+<!-- VDE C2-->
+<table id="vde-c2-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VDE C2 -->
+
+<!-- -------------VDE -------------->
+
+
+<!-------- VI DE --------->
+<img class="icon" src="./assets/icons/militar/vide-col.png" onclick="toggleVisibility('vide-maniobra-col', 'vide-fgos-col', 'vide-proteccion-col', 'vide-sost-col', 'vide-c2-col')"/>
+<table id="vide-maniobra-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BIM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BIS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN CONTRA</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- VIDE FGOS-->
+<table id="vide-fgos-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN ART</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIDE FGOS-->
+
+<!-- VIDE PROTECCION-->
+<table id="vide-proteccion-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIDE PROTECCION -->
+
+<!-- VIDE SOSTENIMIENTO-->
+<table id="vide-sost-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIDE SOSTENIMIENTO -->
+
+<!-- VIDE C2-->
+<table id="vide-c2-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIDE C2 -->
+
+<!-- -------------VIDE -------------->
+
+<!-------- VII DE --------->
+<img class="icon" src="./assets/icons/militar/viide-col.png" onclick="toggleVisibility('viide-maniobra-col', 'viide-fgos-col', 'viide-proteccion-col', 'viide-sost-col', 'viide-c2-col')"/>
+<table id="viide-maniobra-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BIM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BTN OPNS TERRESTRES</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>GPO CAB BLIN</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN EEV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- VIIDE FGOS-->
+<table id="viide-fgos-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN ART</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIIDE FGOS-->
+
+<!-- VIIDE PROTECCION-->
+<table id="viide-proteccion-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIIDE PROTECCION -->
+
+<!-- VIIDE SOSTENIMIENTO-->
+<table id="viide-sost-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIIDE SOSTENIMIENTO -->
+
+<!-- VIIDE C2-->
+<table id="viide-c2-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIDE C2 -->
+
+<!-- -------------VIIDE -------------->
+
+<!-------- VIII DE --------->
+<img class="icon" src="./assets/icons/militar/viiide-col.png" onclick="toggleVisibility('viiide-maniobra-col', 'viiide-fgos-col', 'viiide-proteccion-col', 'viiide-sost-col', 'viiide-c2-col')"/>
+<table id="viiIde-maniobra-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">MANIOBRAS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BIM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>BTN OPNS TERRESTRES</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>GPO CAB MEC</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN EEV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>BTN FFEE</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="70" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="70" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>GPO LIV CAV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="10" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+
+<!-- VIIIDE FGOS-->
+<table id="viiide-fgos-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">FGOS</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN ART</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="25" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIIIDE FGOS-->
+
+<!-- VIIIDE PROTECCION-->
+<table id="viiide-proteccion-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">PROTECCIÓN</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BING</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="30" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIIIDE PROTECCION -->
+
+<!-- VIIIDE SOSTENIMIENTO-->
+<table id="viiide-sost-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">SOSTENIMIENTO</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN SERV</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIIIDE SOSTENIMIENTO -->
+
+<!-- VIIIDE C2-->
+<table id="viiide-c2-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">C2</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>BTN COM</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+</br>
+<!-- VIIDE C2 -->
+
+<!-- -------------VIIIDE -------------->
+
+<!-- INTG -->
+<img class="icon" src="./assets/icons/militar/intg.png" onclick="toggleVisibility('intg-col')"/>
+<table id="intg-col" class="tabla-secundaria-col" style="display: none;">
+    <tr>
+        <th rowspan="2">INTG</th>
+        <th colspan="5" class="nuestras">NUESTRAS</th>
+        <th colspan="5" class="enemigo">ENEMIGO</th>
+        <th rowspan="2">POT COMB</th>
+    </tr>
+    <tr>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+        <th>CANT</th>
+        <th>CAP. OPER</th>
+        <th>CANT. REAL</th>
+        <th>COEF</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr>
+        <td>CIA INTG</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="20" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td class="subtotal"><strong>Subtotal</strong></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
+    </tr>
+</table>
+
+</div>
+</div>
+</br>
+<!-- INTG -->
+
 <!-- FT -->
 <img class="icon" src="./assets/icons/militar/ft.png" onclick="toggleVisibility('ft')"/>
 <table id="ft" class="tabla-secundaria" style="display: none;">
@@ -95,26 +3866,26 @@
     </tr>
     <tr>
         <td>MOVIMIENTO Y MANIOBRA</td>
+        <td><input type="number" id="cant-peru-maniobra-resumen"></td>
         <td><input type="number"></td>
-        <td><input type="number" ></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="2.5" readonly></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
+        <td><input type="number" id="cant-col-maniobra-resumen"></td>
+        <td><input type="number"></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="2.5" readonly></td>
         <td><input type="number" readonly></td>
-        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number" id="potcomb-maniobras"></td>
     </tr>
     <tr>
         <td>FUEGOS</td>
-        <td><input type="number"></td>
+        <td><input type="number" id="cant-peru-fgos-resumen"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="1" readonly></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
+        <td><input type="number" id="cant-col-fgos-resumen"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="1" readonly></td>
@@ -122,12 +3893,12 @@
     </tr>
     <tr>
         <td>PROTECCIÓN</td>
-        <td><input type="number"></td>
+        <td><input type="number" id="cant-peru-proteccion-resumen"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="1" readonly></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
+        <td><input type="number" id="cant-col-proteccion-resumen"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="1" readonly></td>
@@ -135,12 +3906,12 @@
     </tr>
     <tr>
         <td>SOSTENIMIENTO</td>
-        <td><input type="number"></td>
+        <td><input type="number" id="cant-peru-sost-resumen"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="1" readonly></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
+        <td><input type="number" id="cant-col-sost-resumen"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="1" readonly></td>
@@ -148,12 +3919,12 @@
     </tr>
     <tr>
         <td>COMANDO Y CONTROL</td>
-        <td><input type="number"></td>
+        <td><input type="number" id="cant-peru-c2-resumen"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="1" readonly></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
+        <td><input type="number" id="cant-col-c2-resumen"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="1" readonly></td>
@@ -161,12 +3932,12 @@
     </tr>
     <tr>
         <td>INTELIGENCIA</td>
-        <td><input type="number"></td>
+        <td><input type="number" id="cant-peru-intg-resumen"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="1" readonly></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
+        <td><input type="number" id="cant-col-intg-resumen"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
         <td><input type="number" value="1" readonly></td>
@@ -280,338 +4051,439 @@
 
 <!--FA-->
 <img class="icon" src="./assets/icons/militar/fa.png" onclick="toggleVisibility('fa')"/>
-<table id="fa" class="tabla-secundaria" style="display: none;">
-    <tr>
-        <th rowspan="2">FUERZA AÉREA</th>
-        <th colspan="5" class="nuestras">NUESTRAS</th>
-        <th colspan="5" class="enemigo">ENEMIGO</th>
-        <th rowspan="2">POT COMB</th>
-    </tr>
-    <tr>
-        <th>CANT</th>
-        <th>CANT RELATIVA</th>
-        <th>EFECT IND</th>
-        <th>COEF</th>
-        <th>TOTAL</th>
-        <th>CANT</th>
-        <th>CANT RELATIVA</th>
-        <th>EFECT IND</th>
-        <th>COEF</th>
-        <th>TOTAL</th>
-    </tr>
-    <tr>
-        <td>MIRAGE 2000</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.5" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.5" readonly></td>
-        <td><input type="number" readonly></td>
-        <td rowspan="23" style="vertical-align: bottom;"><input type="number"></td>
-    </tr>
-    <tr>
-        <td> MIG 29</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-    
-    <tr>
-        <td> SUKHOI 25</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>IAI kflr C-10/C-12 COA</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>Embraer A-298 Super Tucano</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>Embraer EMB 312 Tucano [AT-27M]</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>Baster BT-67 Fantasma</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>BLACK HAWK</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>MI 35 P</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>MI 17 - SH</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>MI 17</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>MI-25</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>BELL 212</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>BLACK HAWK SIKORSKY</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>BELL UH - 1H HUEY</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>S-70 I SIKOROSKY</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>PERFORMANCE BOEING 737</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>BOEING HERCULES C 130</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>ANTONOV 32B</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>LEONARDO C-27</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>BOEING 767</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-
-    <tr>
-        <td>EMBRAER EMB BRECHERATI</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1.2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-    <tr>
-        <td class="subtotal"><strong>Subtotal</strong></td>
-        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
-        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
-    </tr>
-</table>
+<table id="fa" class="tg" style="display: none;">
+    <thead>
+      <tr>
+        <th class="tg-c3ow"></th>
+        <th class="tg-c3ow"></th>
+        <th class="tg-c3ow"></th>
+        <th class="tg-jzvb" colspan="5">NUESTRAS FUERZAS</th>
+        <th class="tg-0pky"></th>
+        <th class="tg-btz9" colspan="5">ENEMIGO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- FUERZA AEREA - AVIONES DE COMBATE -->
+      <tr>
+        <td class="tg-uzvj" rowspan="31">FUERZA AEREA</td>
+        <td class="tg-uzvj" rowspan="6">AVIONES DE COMBATE</td>
+        <td class="tg-oviw">POTENCIA DE COMBATE</td>
+        <td class="tg-7btt">CANT </td>
+        <td class="tg-7btt">CANT RELAT</td>
+        <td class="tg-7btt">EFECT IND</td>
+        <td class="tg-7btt">COEF</td>
+        <td class="tg-7btt">TOTAL</td>
+        <td class="tg-66je">POTENCIA DE COMBATE</td>
+        <td class="tg-7btt">CANT </td>
+        <td class="tg-7btt">V RELAT</td>
+        <td class="tg-7btt">EFECT IND</td>
+        <td class="tg-7btt">COEF</td>
+        <td class="tg-7btt">TOTAL</td>
+      </tr>
+      <tr data-category="aviones-combate">
+        <td class="tg-c3ow">MIRAGE 2000</td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number" value="1.2"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow">IAI Kfir C-10/C-12 COA</td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number" value="1.2"></td>
+        <td class="tg-7btt"></td>
+      </tr>
+      <tr data-category="aviones-combate">
+        <td class="tg-c3ow">MIG 29</td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number" value="1.2"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow">Embraer A-29B Super Tucano</td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number" value="1.2"></td>
+        <td class="tg-7btt"></td>
+      </tr>
+      <tr data-category="aviones-combate">
+        <td class="tg-c3ow">SUKHOI 25</td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number" value="1.2"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow">Embraer EMB 312 Tucano (AT-27M)</td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number" value="1.2"></td>
+        <td class="tg-7btt"></td>
+      </tr>
+      <tr data-category="aviones-combate">
+        <td class="tg-c3ow"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number" value="1.2"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow">Basler BT-67 Fantasma</td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number"></td>
+        <td class="tg-7btt"><input type="number" value="1.2"></td>
+        <td class="tg-7btt"></td>
+      </tr>
+      <tr data-category="aviones-combate" data-subtotal="true">
+        <td class="tg-c3ow">SUBTOTAL</td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-c3ow">SUBTOTAL</td>
+        <td class="tg-fymr"><input type="number" readonly></td>
+        <td class="tg-fymr"><input type="number" readonly></td>
+        <td class="tg-fymr"><input type="number"></td>
+        <td class="tg-fymr"><input type="number" value="1.2" readonly></td>
+        <td class="tg-fymr"><input type="number" readonly></td>
+      </tr>
+      <!-- BLOQUE: HELICÓPTEROS -->
+      <tr>
+        <td class="tg-uzvj" rowspan="9">HELICOPTEROS</td>
+        <td class="tg-2uq0" rowspan="2">COMBATE</td>
+        <td class="tg-0w2n" colspan="5">NUESTRAS FUERZAS</td>
+        <td class="tg-2uq0" rowspan="2">COMBATE</td>
+        <td class="tg-btz9" colspan="5">ENEMIGO</td>
+      </tr>
+      <tr>
+        <td class="tg-7btt">CANT </td>
+        <td class="tg-7btt">V. RELAT</td>
+        <td class="tg-7btt">EFECT IND</td>
+        <td class="tg-7btt">COEF</td>
+        <td class="tg-7btt">TOTAL</td>
+        <td class="tg-7btt">CANT </td>
+        <td class="tg-7btt">V RELAT</td>
+        <td class="tg-7btt">EFECT IND</td>
+        <td class="tg-7btt">COEF</td>
+        <td class="tg-7btt">TOTAL</td>
+      </tr>
+      <tr data-category="helicopteros">
+        <td class="tg-c3ow">BLACK HAWK</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-c3ow">BLACK HAWK SIKORSKY</td>
+        <td class="tg-fymr"><input type="number"></td>
+        <td class="tg-fymr"><input type="number"></td>
+        <td class="tg-fymr"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5"></td>
+        <td class="tg-fymr"><input type="number"></td>
+      </tr>
+      <tr data-category="helicopteros">
+        <td class="tg-c3ow">MI 35 P</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-c3ow">BELL UH -1H HUEY</td>
+        <td class="tg-fymr"><input type="number"></td>
+        <td class="tg-fymr"><input type="number"></td>
+        <td class="tg-fymr"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5"></td>
+        <td class="tg-fymr"><input type="number"></td>
+      </tr>
+      <tr data-category="helicopteros">
+        <td class="tg-c3ow">MI 17- SH</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-c3ow">MI 17- SH</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5"></td>
+        <td class="tg-0pky"><input type="number"></td>
+      </tr>
+      <tr data-category="helicopteros">
+        <td class="tg-c3ow">MI -17</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-c3ow">MI - 17</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5"></td>
+        <td class="tg-0pky"><input type="number"></td>
+      </tr>
+      <tr data-category="helicopteros">
+        <td class="tg-c3ow">MI-25</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-c3ow">S-70 I SIKOROSKY</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2"></td>
+        <td class="tg-0pky"><input type="number"></td>
+      </tr>
+      <tr data-category="helicopteros">
+        <td class="tg-c3ow">BELL 212</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr data-category="helicopteros" data-subtotal="true">
+        <td class="tg-c3ow">SUBTOTAL</td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-c3ow">SUBTOTAL</td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+      </tr>
+      <!-- BLOQUE: AVIONES DE TRANSPORTE DE PERSONAL Y MATERIAL -->
+      <tr>
+        <td class="tg-uzvj" rowspan="8">AVIONES DE TRANSPORTE <br>DE PERSONAL Y MATERIAL</td>
+        <td class="tg-2uq0" rowspan="2">TRANSPORTE <br>ESTRATEGICO</td>
+        <td class="tg-lvop" colspan="5">NUESTRAS FUERZAS</td>
+        <td class="tg-2uq0" rowspan="2">TRANSPORTE <br>ESTRATEGICO</td>
+        <td class="tg-btz9" colspan="5">ENEMIGO</td>
+      </tr>
+      <tr>
+        <td class="tg-7btt">CANT </td>
+        <td class="tg-7btt">V. RELAT</td>
+        <td class="tg-7btt">EFECT IND</td>
+        <td class="tg-7btt">COEF</td>
+        <td class="tg-7btt">TOTAL</td>
+        <td class="tg-7btt">CANT </td>
+        <td class="tg-7btt">V RELAT</td>
+        <td class="tg-7btt">EFECT IND</td>
+        <td class="tg-7btt">COEF</td>
+        <td class="tg-7btt">TOTAL</td>
+      </tr>
+      <tr data-category="transporte">
+        <td class="tg-c3ow">PERFOMANCE BOEING 737</td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number" value="1.2"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow">Boeing 737</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5"></td>
+        <td class="tg-0pky"><input type="number"></td>
+      </tr>
+      <tr data-category="transporte">
+        <td class="tg-c3ow">BOEING HERCULES C 130</td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number" value="1.2"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow">Boeing C-130 Hercules</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5"></td>
+        <td class="tg-0pky"><input type="number"></td>
+      </tr>
+      <tr data-category="transporte">
+        <td class="tg-c3ow">ANTONOV 32B</td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number" value="1.2"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow">Boeing 767</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5"></td>
+        <td class="tg-0pky"><input type="number"></td>
+      </tr>
+      <tr data-category="transporte">
+        <td class="tg-c3ow">LEONARDO C-27</td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number" value="1.2"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow">EMBRAER EMB</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5"></td>
+        <td class="tg-0pky"><input type="number"></td>
+      </tr>
+      <tr data-category="transporte">
+        <td class="tg-c3ow">BRECHERAFT</td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow">BRECHERAFT</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5"></td>
+        <td class="tg-0pky"><input type="number"></td>
+      </tr>
+      <tr data-category="transporte" data-subtotal="true">
+        <td class="tg-c3ow">SUBTOTAL</td>
+        <td class="tg-c3ow"><input type="number" readonly></td>
+        <td class="tg-c3ow"><input type="number" readonly></td>
+        <td class="tg-c3ow"><input type="number"></td>
+        <td class="tg-c3ow"><input type="number" value="1.3" readonly></td>
+        <td class="tg-c3ow"><input type="number" readonly></td>
+        <td class="tg-c3ow">SUBTOTAL</td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+      </tr>
+      <!-- BLOQUE: PERSONAL -->
+      <tr data-category="personal">
+        <td class="tg-uzvj" rowspan="4">PERSONAL</td>
+        <td class="tg-2uq0" rowspan="2">DISPONIBILIDAD</td>
+        <td class="tg-lvop" colspan="5">NUESTRAS FUERZAS</td>
+        <td class="tg-2uq0" rowspan="2">DISPONIBILIDAD</td>
+        <td class="tg-btz9" colspan="5">ENEMIGO</td>
+      </tr>
+      <tr>
+        <td class="tg-7btt">CANT </td>
+        <td class="tg-7btt">V. RELAT</td>
+        <td class="tg-7btt">EFECT IND</td>
+        <td class="tg-7btt">COEF</td>
+        <td class="tg-7btt">TOTAL</td>
+        <td class="tg-7btt">CANT </td>
+        <td class="tg-7btt">V. RELAT</td>
+        <td class="tg-7btt">EFECT IND</td>
+        <td class="tg-7btt">COEF</td>
+        <td class="tg-7btt">TOTAL</td>
+      </tr>
+      <tr data-category="personal">
+        <td class="tg-c3ow">PERSONAL DISPONIBLE</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-c3ow">PERSONAL DISPONIBLE</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5"></td>
+        <td class="tg-0pky"><input type="number"></td>
+      </tr>
+      <tr data-category="personal" data-subtotal="true">
+        <td class="tg-c3ow">SUBTOTAL</td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-c3ow">SUBTOTAL</td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.5" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+      </tr>
+      <!-- BLOQUE: BASES AEREAS -->
+      <tr>
+        <td class="tg-uzvj" rowspan="4">BASES AEREAS</td>
+        <td class="tg-2uq0" rowspan="2">UU MILITARES</td>
+        <td class="tg-lvop" colspan="5">NUESTRAS FUERZAS</td>
+        <td class="tg-2uq0" rowspan="2">UU MILITARES</td>
+        <td class="tg-btz9" colspan="5">ENEMIGO</td>
+      </tr>
+      <tr>
+        <td class="tg-7btt">CANT </td>
+        <td class="tg-7btt">V. RELAT</td>
+        <td class="tg-7btt">EFECT IND</td>
+        <td class="tg-7btt">COEF</td>
+        <td class="tg-7btt">TOTAL</td>
+        <td class="tg-7btt">CANT </td>
+        <td class="tg-7btt">V. RELAT</td>
+        <td class="tg-7btt">EFECT IND</td>
+        <td class="tg-7btt">COEF</td>
+        <td class="tg-7btt">TOTAL</td>
+      </tr>
+      <tr data-category="bases">
+        <td class="tg-c3ow">BASES MILITARES</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-c3ow">BASES MILITARES</td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2"></td>
+        <td class="tg-0pky"><input type="number"></td>
+      </tr>
+      <tr data-category="bases" data-subtotal="true">
+        <td class="tg-c3ow">SUBTOTAL</td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-c3ow">SUBTOTAL</td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+        <td class="tg-0pky"><input type="number"></td>
+        <td class="tg-0pky"><input type="number" value="1.2" readonly></td>
+        <td class="tg-0pky"><input type="number" readonly></td>
+      </tr>
+      <!-- Resumen Final -->
+      <tr>
+        <td class="tg-0pky" rowspan="2"></td>
+        <td class="tg-lvop" colspan="5">PERU   </td>
+        <td class="tg-fymr"><input id="total-fa-peru" type="number" readonly></td>
+        <td class="tg-btz9" colspan="5">COLOMBIA   </td>
+        <td class="tg-fymr"><input id="total-fa-col" type="number" readonly></td>
+      </tr>
+      <tr>
+        <td class="tg-oviw" colspan="11">TOTAL</td>
+        <td class="tg-fymr"><input id="total-fa-tabla" type="number" readonly></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
 </br>
 
 <!-- LIDERAZGO -->
@@ -683,3 +4555,4 @@
     </tr>
 </table>
 </br>
+

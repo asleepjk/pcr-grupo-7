@@ -66,12 +66,9 @@ function calcularTablaSecundariaEconomia(tablaID) {
 function actualizarTablaPrincipalEconomia() {
     const categoria = "economia";
     const factores = {
-        "produccion-economia": "produccion-economia",
-        "distribucion-economia": "distribucion-economia",
-        "consumo-economia": "consumo-economia",
+        "pbi-economia": "pbi-economia",
         "defensa-economia": "defensa-economia",
         "reserva-economia": "reserva-economia",
-        "informal-economia": "informal-economia"
     }
 
     let totalNuestras = 0;

@@ -18,42 +18,17 @@
     </tr>
     <tr>
         <td rowspan="7">ECONOMÍA</td>
-        <td>PRODUCCIÓN</td>
-        <td><input type="number" id="cant-produccion-economia" readonly></td>
-        <td><input type="number" id="coef-produccion-economia" value="1" readonly></td>
-        <td><input type="number" id="total-produccion-economia" readonly></td>
-        <td><input type="number" id="cant-produccion-economia-enemigo" readonly></td>
-        <td><input type="number" id="coef-produccion-economia-enemigo" value="1" readonly></td>
-        <td><input type="number" id="total-produccion-economia-enemigo" readonly></td>
+        <td>PBI</td>
+        <td><input type="number" id="cant-pbi-economia" readonly></td>
+        <td><input type="number" id="coef-pbi-economia" value="1" readonly></td>
+        <td><input type="number" id="total-pbi-economia" readonly></td>
+        <td><input type="number" id="cant-pbi-economia-enemigo" readonly></td>
+        <td><input type="number" id="coef-pbi-economia-enemigo" value="1" readonly></td>
+        <td><input type="number" id="total-pbi-economia-enemigo" readonly></td>
         <td rowspan="7" style="vertical-align: bottom;"><input type="number" id="potcomb-politica-economia" readonly></td>
     </tr>
-    <tr>
-        <td>DISTRIBUCIÓN</td>
-        <td><input type="number" id="cant-distribucion-economia" readonly></td>
-        <td><input type="number" id="coef-distribucion-economia" value="1" readonly></td>
-        <td><input type="number" id="total-distribucion-economia" readonly></td>
-        <td><input type="number" id="cant-distribucion-economia-enemigo" readonly></td>
-        <td><input type="number" id="coef-distribucion-economia-enemigo" value="1" readonly></td>
-        <td><input type="number" id="total-distribucion-economia-enemigo" readonly></td>
-    </tr>
-    <tr>
-        <td>CONSUMO</td>
-        <td><input type="number" id="cant-consumo-economia" readonly></td>
-        <td><input type="number" id="coef-consumo-economia" value="1" readonly></td>
-        <td><input type="number" id="total-consumo-economia" readonly></td>
-        <td><input type="number" id="cant-consumo-economia-enemigo" readonly></td>
-        <td><input type="number" id="coef-consumo-economia-enemigo" value="1" readonly></td>
-        <td><input type="number" id="total-consumo-economia-enemigo" readonly></td>
-    </tr>
-    <tr>
-        <td>GASTO EN DEFENSA</td>
-        <td><input type="number" id="cant-defensa-economia" readonly></td>
-        <td><input type="number" id="coef-defensa-economia" value="3" readonly></td>
-        <td><input type="number" id="total-defensa-economia" readonly></td>
-        <td><input type="number" id="cant-defensa-economia-enemigo" readonly></td>
-        <td><input type="number" id="coef-defensa-economia-enemigo" value="3" readonly></td>
-        <td><input type="number" id="total-defensa-economia-enemigo" readonly></td>
-    </tr>
+    
+
     <tr>
         <td>RESERVAS INTERNACIONALES</td>
         <td><input type="number" id="cant-reserva-economia" readonly></td>
@@ -64,14 +39,15 @@
         <td><input type="number" id="total-reserva-economia-enemigo" readonly></td>
     </tr>
     <tr>
-        <td>ECONOMÍA INFORMAL</td>
-        <td><input type="number" id="cant-informal-economia" readonly></td>
-        <td><input type="number" id="coef-informal-economia" value="1" readonly></td>
-        <td><input type="number" id="total-informal-economia" readonly></td>
-        <td><input type="number" id="cant-informal-economia-enemigo" readonly></td>
-        <td><input type="number" id="coef-informal-economia-enemigo" value="1" readonly></td>
-        <td><input type="number" id="total-informal-economia-enemigo" readonly></td>
+        <td>GASTO EN DEFENSA</td>
+        <td><input type="number" id="cant-defensa-economia" readonly></td>
+        <td><input type="number" id="coef-defensa-economia" value="3" readonly></td>
+        <td><input type="number" id="total-defensa-economia" readonly></td>
+        <td><input type="number" id="cant-defensa-economia-enemigo" readonly></td>
+        <td><input type="number" id="coef-defensa-economia-enemigo" value="3" readonly></td>
+        <td><input type="number" id="total-defensa-economia-enemigo" readonly></td>
     </tr>
+    
     <tr>
         <td class="subtotal"><strong>Subtotal</strong></td>
         <td class="subtotal" colspan="3" style="text-align: right;"><input type="number" id="subtotal-nuestras-economia" readonly></td>
@@ -81,11 +57,11 @@
 
 
 </br>
-<!-- PRODUCCION -->
-<img class="icon" src="./assets/icons/economia/pbi.png" onclick="toggleVisibility('produccion-economia' , 'distribucion-economia', 'consumo-economia', 'informal-economia')"/>
-<table id="produccion-economia" class="tabla-secundaria" style="display: none;">
+<!-- PBI -->
+<img class="icon" src="./assets/icons/economia/pbi.png" onclick="toggleVisibility('pbi-economia')"/>
+<table id="pbi-economia" class="tabla-secundaria" style="display: none;">
     <tr>
-        <th rowspan="2">PRODUCCIÓN</th>
+        <th rowspan="2">PRDUCTO BRUTO INTERNO</th>
         <th colspan="5" class="nuestras">NUESTRAS</th>
         <th colspan="5" class="enemigo">ENEMIGO</th>
         <th rowspan="2">POT COMB</th>
@@ -101,144 +77,6 @@
         <th>CANT. REAL</th>
         <th>COEF</th>
         <th>TOTAL</th>
-    </tr>
-    <tr>
-        <td>INDUSTRIAL</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
-    </tr>
-    <tr>
-        <td>AGRÍCOLA</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-    <tr>
-        <td>MINERA</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-    <tr>
-        <td class="subtotal"><strong>Subtotal</strong></td>
-        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
-        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
-    </tr>
-</table>
-</br>
-
-<!-- DISTRIBUCION -->
-
-<table id="distribucion-economia" class="tabla-secundaria"  style="display: none;">
-    <tr>
-        <th rowspan="2">DISTRIBUCIÓN</th>
-        <th colspan="5" class="nuestras">NUESTRAS</th>
-        <th colspan="5" class="enemigo">ENEMIGO</th>
-        <th rowspan="2">POT COMB</th>
-    </tr>
-    <tr>
-        <th>CANT</th>
-        <th>ESTADÍSTICA</br>(INEI)</th>
-        <th>CANT. REAL</th>
-        <th>COEF</th>
-        <th>TOTAL</th>
-        <th>CANT</th>
-        <th>ESTADÍSTICA</br>(INEI)</th>
-        <th>CANT. REAL</th>
-        <th>COEF</th>
-        <th>TOTAL</th>
-    </tr>
-    <tr>
-        <td>EXPORTACIÓN</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
-    </tr>
-    <tr>
-        <td>IMPORTACIÓN</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-    <tr>
-        <td class="subtotal"><strong>Subtotal</strong></td>
-        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
-        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
-    </tr>
-</table>
-</br>
-
-<!--CONSUMO-->
-<table id="consumo-economia" class="tabla-secundaria"  style="display: none;">
-    <tr>
-        <th rowspan="2">CONSUMO</th>
-        <th colspan="5" class="nuestras">NUESTRAS</th>
-        <th colspan="5" class="enemigo">ENEMIGO</th>
-        <th rowspan="2">POT COMB</th>
-    </tr>
-    <tr>
-        <th>CANT</th>
-        <th>ESTADÍSTICA</br>(INEI)</th>
-        <th>CANT. REAL</th>
-        <th>COEF</th>
-        <th>TOTAL</th>
-        <th>CANT</th>
-        <th>ESTADÍSTICA</br>(INEI)</th>
-        <th>CANT. REAL</th>
-        <th>COEF</th>
-        <th>TOTAL</th>
-    </tr>
-    <tr>
-        <td>MERCADOS NACIONALES</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
     </tr>
     <tr>
         <td>INVERSIÓN EXTRANJERA</td>
@@ -252,6 +90,59 @@
         <td><input type="number" readonly></td>
         <td><input type="number" value="1" readonly></td>
         <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>DEUDA DEL GOBIERNO</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>INFLACIÓN</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>EXPORTACIONES</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+    </tr>
+    <tr>
+        <td>RENTA DE RECURSOS</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
     </tr>
     <tr>
         <td class="subtotal"><strong>Subtotal</strong></td>
@@ -261,86 +152,6 @@
 </table>
 </br>
 
-<!-- INFORMAL -->
-<table id="informal-economia" class="tabla-secundaria"  style="display: none;">
-    <tr>
-        <th rowspan="2">ECONOMÍA INFORMAL</th>
-        <th colspan="5" class="nuestras">NUESTRAS</th>
-        <th colspan="5" class="enemigo">ENEMIGO</th>
-        <th rowspan="2">POT COMB</th>
-    </tr>
-    <tr>
-        <th>CANT</th>
-        <th>ESTADÍSTICA</br>(INEI)</th>
-        <th>CANT. REAL</th>
-        <th>COEF</th>
-        <th>TOTAL</th>
-        <th>CANT</th>
-        <th>ESTADÍSTICA</br>(INEI)</th>
-        <th>CANT. REAL</th>
-        <th>COEF</th>
-        <th>TOTAL</th>
-    </tr>
-    <tr>
-        <td>MINERÍA ILEGAL</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
-    </tr>
-    <tr>
-        <td>TALA ILEGAL</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="2" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="2" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-    <tr>
-        <td>NARCOTRÁFICO</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-    <tr>
-        <td>TRABAJO NO REGULADO</td>
-        <td><input type="number"></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" ></td>
-        <td><input type="number" ></td>
-        <td><input type="number" readonly></td>
-        <td><input type="number" value="1" readonly></td>
-        <td><input type="number" readonly></td>
-    </tr>
-    <tr>
-        <td class="subtotal"><strong>Subtotal</strong></td>
-        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
-        <td class="subtotal" colspan="5"  style="text-align: right;"><input type="number" readonly></td>
-    </tr>
-</table>
-</br>
 
 <!-- RESERVA INTERNACIONAL -->
 <img class="icon" src="./assets/icons/economia/reserva.png" onclick="toggleVisibility('reserva-economia')"/>
@@ -368,12 +179,12 @@
         <td><input type="number"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" value="3" readonly></td>
+        <td><input type="number" value="1" readonly></td>
         <td><input type="number" readonly></td>
         <td><input type="number" ></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" value="3" readonly></td>
+        <td><input type="number" value="1" readonly></td>
         <td><input type="number" readonly></td>
         <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
     </tr>
@@ -407,16 +218,30 @@
         <th>TOTAL</th>
     </tr>
     <tr>
-        <td>GASTO EN DEFENSA</td>
+        <td>GASTO MILITAR</td>
         <td><input type="number"></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" value="3" readonly></td>
+        <td><input type="number" value="1" readonly></td>
         <td><input type="number" readonly></td>
         <td><input type="number" ></td>
         <td><input type="number" ></td>
         <td><input type="number" readonly></td>
-        <td><input type="number" value="3" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
+    </tr>
+    <tr>
+        <td>PBI</td>
+        <td><input type="number"></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" ></td>
+        <td><input type="number" ></td>
+        <td><input type="number" readonly></td>
+        <td><input type="number" value="1" readonly></td>
         <td><input type="number" readonly></td>
         <td rowspan="8" style="vertical-align: bottom;"><input type="number"></td>
     </tr>
